@@ -1,56 +1,79 @@
 var stories_map = {
-	"communicate":{
- 		"a complex emotion":{
- 			"without":{
- 				"words":0
- 			}
- 		},
- 		"with a gorilla / with another specie":{
- 			"using":{
- 				"internet":3
- 			}
- 		},
- 		"with a stranger":{
- 			"without":{
- 				"a network access":1
- 			},
- 			"in Sweden":{
- 				"using":{
- 					"a phone":2
- 				}
- 			},
- 		}	
- 	},
- 	"send a message":{
- 		"to a friend":{
- 			"without":{
- 				"knowing their address":1
- 			}
- 		},
- 		"to a celebrity":{
- 			"without":{
- 				"knowing their address":2
- 			}
- 		}
- 	},
- 	"speak":{
- 		"silently":{
- 			"without":{
- 				"knowing how to read lips":3
- 			}
- 		}
- 	},
- 	"access":{
- 		"a radio":{
- 			"using scrap materials":4
- 		},
- 		"a TV":{
- 			"using scrap materials":4
- 		},
- 		"WI-FI network":{
- 			"using scrap materials":4
- 		}
- 	}
+
+	"without" : {
+		"speaking" : {
+			"using ear and tongue sensors" : 1,
+			"using brain-to-text technology" : 2,
+			"using A.I to lipread" : 3
+		},
+		"being in the 21st century" : 1,
+		"technology" : 2
+	},
+
+	"with" : {
+		"a random stranger" : {
+			"call this number to talk to a random Swede" : 1,
+			"cement USB keys into the walls" : 2
+		},
+		"someone you know" : {
+			"without knowing his address" : {
+				"draw a map on the envelop" : 1
+			},
+			"without knowing how to reach him" : {
+				"Use Facebook" : 1
+			}
+		}
+	},
+
+	"to another specie" : {
+		"interspecie live-chat" : 1
+	},
+
+	"to a machine" : {
+		"telling your problems to ELIZA" : 1
+	},
+
+	"about" : {
+		"complex emtions" : {
+			"without speaking" : {
+				"using emojis" : 1,
+				"using flowers" : 2
+			}
+		},
+		"sensensitive informations" : 1
+	},
+
+	"under surveillance" : {
+		"in a prison" : 1,
+		"as an hostage" : 2
+	},
+
+	"against" : {
+		"online racism" : {
+			"using your own secret code" : 1,
+			"trolling them IRL" : 2
+		}
+	},
+
+	"beyond" : {
+		"borders" : {
+			"attaching USB sticks onto balloons" : 1,
+			"using carrier pigeons" : 2,
+			"building loudspeakers walls" : 3
+		},
+		"language and culture barriers" : {
+			"learning communication patterns to avoid dramas" : 1,
+			"using illustrations" : 2,
+			"being prepared to face your counterpart" : 3
+		}
+	},
+
+	"from" : {
+		"the middle of the sea" : {
+			"sending a message in a bottle" : 1,
+			"using semaphore flags" : 2
+		}
+	}
 }
 
 var stories = [
@@ -81,8 +104,6 @@ var stories = [
 	}
 ];
 
-
-
 $(document).ready(function() {
   	init();
 });
@@ -101,6 +122,11 @@ function init() {
 
 	$(document).on('click', '.select:not(.select--closed) .select__option', function(e) {
 		var select = $(this).parent();
+
+		// Stop if clicked option is default
+		if ($(this).hasClass('select__option--default')) {
+			return;
+		}
 
 		// Select clicked option and put it as first child
 		select.find('.select__option--selected').removeClass('select__option--selected');
@@ -134,8 +160,8 @@ function updateSelect(select) {
 				return;
 			} else {
 				console.log(stories[t].url);
-				$('#result').append('<span>' + stories[t].title + '</span>');
-				$('#frame').attr('src', stories[t].url);
+				$('#result').empty().append('<span>' + stories[t].title + '</span>');
+				// $('#frame').attr('src', stories[t].url);
 			}
 		} else {
 			console.log('n-equal');
@@ -158,5 +184,8 @@ function makeSelect(obj) {
 	// Compute height
 	t.height(options_count * 20);
 
-	return t;
+	var output = $('<div class="select__wrapper"></div>').append(t);
+
+	// Return builded custom select
+	return output;
 }

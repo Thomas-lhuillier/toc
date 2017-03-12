@@ -2,7 +2,8 @@
 
 body {
 	font-size: 16px;
-	background-color: #000;
+	font-family: 'Inconsolata', monospace, sans-serif;
+	background-color: #fff;
 }
 
 #container {
@@ -10,24 +11,28 @@ body {
 
 	font-size: 16px;
 	line-height: 20px;
-	font-family: 'Inconsolata', monospace, sans-serif;
 
-	color: #fff;
-	background: black;
+	color: #000;
 	z-index: 100;
 }
 
 .select {
 	position: relative;
 	display: inline-block;
-	height: 20px;
 	vertical-align: top;
 	color: blue;
 
 	overflow: hidden;
 	cursor: pointer;
+	user-select: none;
 
 	transition: all .2s ease;
+
+	// &:before {
+	// 	content: '';
+	// 	display: table;
+	// 	clear: both;
+	// }
 
 	&:after {
 		position: absolute;
@@ -53,16 +58,18 @@ body {
 		transition: color .3s ease;
 
 		&:hover {
-			color: #fff;
+			color: #000;
 		}
 
-		&.select__option--default {
-			color: red;
-		}
+		&.select__option--default {}
 	}
 }
 
-
 .select + .select {
-	margin-left: 20px;
+	// margin-left: 20px;
+}
+
+#result {
+	padding: 10px;
+	text-align: center;
 }

@@ -57,32 +57,31 @@ table {
 /* line 3, ../sass/main.scss */
 body {
   font-size: 16px;
-  background-color: #000;
+  font-family: 'Inconsolata', monospace, sans-serif;
+  background-color: #fff;
 }
 
-/* line 8, ../sass/main.scss */
+/* line 9, ../sass/main.scss */
 #container {
   padding: 10px;
   font-size: 16px;
   line-height: 20px;
-  font-family: 'Inconsolata', monospace, sans-serif;
-  color: #fff;
-  background: black;
+  color: #000;
   z-index: 100;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 .select {
   position: relative;
   display: inline-block;
-  height: 20px;
   vertical-align: top;
   color: blue;
   overflow: hidden;
   cursor: pointer;
+  user-select: none;
   transition: all .2s ease;
 }
-/* line 32, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .select:after {
   position: absolute;
   display: block;
@@ -94,26 +93,23 @@ body {
   background-color: blue;
   transition: all .2s ease;
 }
-/* line 46, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 .select.select--closed {
   height: 20px !important;
 }
-/* line 50, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .select .select__option {
   height: 20px;
   box-sizing: border-box;
   transition: color .3s ease;
 }
-/* line 55, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .select .select__option:hover {
-  color: #fff;
-}
-/* line 59, ../sass/main.scss */
-.select .select__option.select__option--default {
-  color: red;
+  color: #000;
 }
 
-/* line 66, ../sass/main.scss */
-.select + .select {
-  margin-left: 20px;
+/* line 72, ../sass/main.scss */
+#result {
+  padding: 10px;
+  text-align: center;
 }
