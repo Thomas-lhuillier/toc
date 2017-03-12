@@ -2,7 +2,7 @@ var stories_map = {
 
 	"without" : {
 		"speaking" : {
-			"using ear and tongue sensors" : 1,
+			"using ear and tongue sensors" : 0,
 			"using brain-to-text technology" : 2,
 			"using A.I to lipread" : 3
 		},
@@ -22,15 +22,14 @@ var stories_map = {
 			"without knowing how to reach him" : {
 				"Use Facebook" : 1
 			}
+		},
+		"another specie" : {
+			"interspecie live-chat" : 1
+		},
+
+		"a machine" : {
+			"telling your problems to ELIZA" : 1
 		}
-	},
-
-	"to another specie" : {
-		"interspecie live-chat" : 1
-	},
-
-	"to a machine" : {
-		"telling your problems to ELIZA" : 1
 	},
 
 	"about" : {
@@ -79,8 +78,8 @@ var stories_map = {
 var stories = [
 	//0
 	{	
-		"url":"http://gizmodo.com/and-your-2015-word-of-the-year-is-the-face-with-tears-1742855716",
-		"title":"2015 word of the year is the face with tears"
+		"url"   : "https://www.newscientist.com/article/dn28504-ear-and-tongue-sensors-combine-to-understand-silent-speech/",
+		"title" : 'Ear and tongue sensors combine to understand "silent speech"'
 	},
 	//1
 	{	
