@@ -143,7 +143,7 @@ function init() {
 
 function updateSelect(select) {
 	var t = stories_map;
-	select.nextAll().remove();
+	select.parent().nextAll().remove();
 
 	$('.select').each(function(key, s) {
 		var selected = $(this).find('.select__option--selected').text();
