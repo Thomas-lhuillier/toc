@@ -16,12 +16,14 @@ var stories_map = {
 			"cement USB keys into the walls" : 2
 		},
 		"someone you know" : {
-			"without knowing his address" : {
-				"draw a map on the envelop" : 1
+			"without" : {
+				"knowing his address" : {
+					"draw a map on the envelop" : 1
+				},
+				"knowing how to reach him" : {
+					"Use Facebook" : 1
+				}
 			},
-			"without knowing how to reach him" : {
-				"Use Facebook" : 1
-			}
 		},
 		"another specie" : {
 			"interspecie live-chat" : 1
