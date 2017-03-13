@@ -54,34 +54,97 @@ table {
   border-spacing: 0;
 }
 
-/* line 3, ../sass/main.scss */
-body {
-  font-size: 16px;
-  font-family: 'Inconsolata', monospace, sans-serif;
-  background-color: #fff;
+/* line 17, ../sass/main.scss */
+html {
+  font-size: 1em;
 }
 
-/* line 9, ../sass/main.scss */
-#container {
-  padding: 10px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000;
+/* line 21, ../sass/main.scss */
+body {
+  font-size: 48px;
+  line-height: 1.45;
+  font-family: "Vollkorn", serif;
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 30, ../sass/main.scss */
+p {
+  margin-bottom: 1.3em;
+}
+
+/* line 34, ../sass/main.scss */
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  font-family: "Abril", serif;
+}
+
+/* line 41, ../sass/main.scss */
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+/* line 46, ../sass/main.scss */
+h2 {
+  font-size: 2.369em;
+}
+
+/* line 50, ../sass/main.scss */
+h3 {
+  font-size: 1.777em;
+}
+
+/* line 54, ../sass/main.scss */
+h4 {
+  font-size: 1.333em;
+}
+
+/* line 58, ../sass/main.scss */
+small, .font_small {
+  font-size: 0.75em;
+}
+
+/* line 62, ../sass/main.scss */
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+  padding: 48px;
+  min-height: 100vh;
+  line-height: 2.9;
+  text-transform: uppercase;
+}
+/* line 75, ../sass/main.scss */
+.intro-wrapper span {
+  display: block;
+  height: 139px;
+}
+
+/* line 81, ../sass/main.scss */
+.select-container {
+  padding: 48px;
+  font-size: 48px;
+  line-height: 72px;
+  font-family: "Inconsolata", monospace;
   z-index: 100;
 }
 
-/* line 19, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 .select {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  color: blue;
   overflow: hidden;
   cursor: pointer;
   user-select: none;
   transition: all .2s ease;
 }
-/* line 37, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .select:after {
   position: absolute;
   display: block;
@@ -90,26 +153,32 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background-color: blue;
+  background-color: #fff;
   transition: all .2s ease;
 }
-/* line 51, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .select.select--closed {
-  height: 20px !important;
+  height: 48px !important;
 }
-/* line 55, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 .select .select__option {
-  height: 20px;
+  height: 48px;
+  line-height: 48px;
   box-sizing: border-box;
   transition: color .3s ease;
 }
-/* line 60, ../sass/main.scss */
+/* line 126, ../sass/main.scss */
 .select .select__option:hover {
-  color: #000;
+  color: #333;
 }
 
-/* line 72, ../sass/main.scss */
-#result {
-  padding: 10px;
-  text-align: center;
+/* line 137, ../sass/main.scss */
+.story {
+  padding: 1.414em 0;
+  max-width: 700px;
+  margin: auto;
+}
+/* line 145, ../sass/main.scss */
+.story .story__author {
+  float: right;
 }
