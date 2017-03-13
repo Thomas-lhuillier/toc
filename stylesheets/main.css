@@ -109,32 +109,66 @@ small, .font_small {
 
 /* line 62, ../sass/main.scss */
 .intro-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-sizing: border-box;
-  font-family: "Inconsolata", monospace;
   padding: 48px;
   min-height: 100vh;
-  line-height: 2.9;
-  text-transform: uppercase;
-}
-/* line 75, ../sass/main.scss */
-.intro-wrapper span {
-  display: block;
-  height: 139px;
+  font-family: "Inconsolata", monospace;
+  font-size: 96px;
 }
 
-/* line 81, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 95, ../sass/main.scss */
 .select-container {
+  min-height: 100vh;
   padding: 48px;
+  box-sizing: border-box;
   font-size: 48px;
   line-height: 72px;
   font-family: "Inconsolata", monospace;
   z-index: 100;
 }
 
-/* line 91, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .select {
   position: relative;
   display: inline-block;
@@ -144,7 +178,7 @@ small, .font_small {
   user-select: none;
   transition: all .2s ease;
 }
-/* line 102, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 .select:after {
   position: absolute;
   display: block;
@@ -156,29 +190,29 @@ small, .font_small {
   background-color: #fff;
   transition: all .2s ease;
 }
-/* line 116, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .select.select--closed {
   height: 48px !important;
 }
-/* line 120, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .select .select__option {
   height: 48px;
   line-height: 48px;
   box-sizing: border-box;
   transition: color .3s ease;
 }
-/* line 126, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .select .select__option:hover {
   color: #333;
 }
 
-/* line 137, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .story {
   padding: 1.414em 0;
   max-width: 700px;
   margin: auto;
 }
-/* line 145, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .story .story__author {
   float: right;
 }

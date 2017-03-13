@@ -60,26 +60,42 @@ small, .font_small {
 }
 
 .intro-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	box-sizing: border-box;
 
-	font-family: $font-family-code;
 	padding: $font-size-base;
 	min-height: 100vh;
 
-	line-height: $line-height-base * 2;
-	text-transform: uppercase;
+	font-family: $font-family-code;
+	font-size: $font-size-base * 2;
+}
 
-	span {
-		display: block;
-		height: 139px;
-	}
+// Blinking cursor
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 .select-container {
+	min-height: 100vh;
 	padding: $font-size-base;
+	box-sizing: border-box;
 
 	font-size: $font-size-base;
 	line-height: $font-size-base  * 1.5;

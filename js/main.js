@@ -115,17 +115,27 @@ var font_size_base = 48;
 
 $(document).ready(function() {
 	setTimeout(function(){
-		$('.js-intro').children().each(function(i) {
-			var that = this;
-			var content = $(this).data('content');
-			setTimeout(function(){
-				shuffleLetters(that, {
-					text: content,
-					step: 4, // How many times should the letters be changed
-					fps: 15 // Frames Per Second
-				});
-			}, 500 * i);
-		});
+		// $('.js-intro').children().each(function(i) {
+		// 	var that = this;
+		// 	var content = $(this).data('content');
+		// 	setTimeout(function(){
+		// 		shuffleLetters(that, {
+		// 			text: content,
+		// 			step: 4, // How many times should the letters be changed
+		// 			fps: 15 // Frames Per Second
+		// 		});
+		// 	}, 500 * i);
+		// });
+
+		Typed.new('.js-intro', {
+	        strings: [
+	        	"Explore ^1000 your choices.",
+	        	"Learn ^1000 the tools to communicate.",
+	        	"Find ^1000 the way to exchange..."
+        	],
+	        typeSpeed: 100,
+	        backDelay: 1000
+	      });
 	}, 2000);
 
   	init();
