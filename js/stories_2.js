@@ -1,6 +1,7 @@
 var stories_2 = [
   {
     // 1
+    "id"       : 0,
     "title"    : "How cute dogs became a symbol of protest",
     "url"      : "http://www.bbc.com/news/magazine-38936570",
     "source"   : "BBC",
@@ -20,6 +21,7 @@ var stories_2 = [
   },
   {
     // 2
+    "id"       : 1,
     "title"    : "Romanian protesters use mobile phones to protest",
     "url"      : "http://www.bbc.com/news/world-europe-38952193",
     "source"   : "BBC",
@@ -38,7 +40,8 @@ var stories_2 = [
     "image"    : ""
   },
   {
-    // 3
+    //3
+    "id"       : 2,
     "title"    : "Eliza",
     "url"      : "https://en.wikipedia.org/wiki/ELIZA",
     "source"   : "Wikipedia",
@@ -50,7 +53,7 @@ var stories_2 = [
     "time"     : "",
     "message"  : "about depression",
     "medium"   : ["using a chatterbot", "using a bot"],
-    "recipient": ["with a machine", "an artificial intelligence"],
+    "recipient": ["with a machine", "with an artificial intelligence"],
     "keywords" : ["protest", "symbol"],
 
     "access"   : "",
@@ -58,6 +61,7 @@ var stories_2 = [
   },
   {
     // 4
+    "id"       : 3,
     "title"    : "Woman who hit Venezuelan president with mango rewarded with house",
     "url"      : "https://www.theguardian.com/world/2015/apr/25/venezuela-woman-president-mango-house",
     "source"   : "The Guardian",
@@ -77,6 +81,7 @@ var stories_2 = [
   },
   {
     // 5
+    "id"       : 4,
     "title"    : "These Emoji make it easier for kids to ‘talk’ about abuse",
     "url"      : "https://www.wired.com/2015/06/abused-emoji/",
     "source"   : "Wired",
