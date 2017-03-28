@@ -61,7 +61,7 @@ function init() {
 
     // If story contains 1st choice value
     for (var key in story) {
-      if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && story[key].indexOf(choice1[2]) ) {
+      if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) && story[key].indexOf(choice1.value) >= 0 ) {
         isValid = true;
       }
     }
@@ -70,6 +70,8 @@ function init() {
       stories_pool.push(i);
     }
   }
+
+  console.log(stories_pool);
 
   // Pick random 2nd choice
   while ( !choice2.value ) {
