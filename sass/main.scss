@@ -1,13 +1,12 @@
 // Global variables
-$font-family         : 'Vollkorn', serif;
-$font-family-display : 'Abril', serif;
-$font-family-code    : 'Inconsolata', monospace;
+$font-family         : 'Poppins', serif;
+$font-family-display : 'Gentium Book Basic', serif;
 
-$font-size-base      : 48px;
+$font-size-base      : 24px;
 $line-height-base    : 1.45;
 
-$color-background    : #000;
-$color-text          : #fff;
+$color-background    : #fff;
+$color-text          : #000;
 $color-hover         : #333;
 
 // Reset
@@ -59,13 +58,20 @@ small, .font_small {
 	font-size: 0.75em;
 }
 
+.choice {
+	padding-left: 10px;
+
+	&.random {
+		color: gray;
+	}
+}
+
 .intro-wrapper {
 	box-sizing: border-box;
 
 	padding: $font-size-base;
 	min-height: 100vh;
 
-	font-family: $font-family-code;
 	font-size: $font-size-base * 2;
 }
 
@@ -99,7 +105,7 @@ small, .font_small {
 
 	font-size: $font-size-base;
 	line-height: $font-size-base  * 1.5;
-	font-family: $font-family-code;
+	font-family: $font-family;
 
 	z-index: 100;
 }

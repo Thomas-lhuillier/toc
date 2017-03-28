@@ -1,248 +1,286 @@
-var stories_map = {
+// var stories_map
+// var stories
+// var stories_2
 
-	"without" : {
-		"speaking" : {
-			"using ear and tongue sensors" : 0,
-			"using brain-to-text technology" : 2,
-			"using A.I to lipread" : 3
-		},
-		"being in the 21st century" : 1,
-		"technology" : 2
-	},
-
-	"with" : {
-		"a random stranger" : {
-			"call this number to talk to a random Swede" : 1,
-			"cement USB keys into the walls" : 2
-		},
-		"someone you know" : {
-			"without" : {
-				"knowing his address" : {
-					"draw a map on the envelop" : 1
-				},
-				"knowing how to reach him" : {
-					"Use Facebook" : 1
-				}
-			},
-		},
-		"another specie" : {
-			"interspecie live-chat" : 1
-		},
-
-		"a machine" : {
-			"telling your problems to ELIZA" : 1
-		}
-	},
-
-	"about" : {
-		"complex emtions" : {
-			"without speaking" : {
-				"using emojis" : 1,
-				"using flowers" : 2
-			}
-		},
-		"sensensitive informations" : 1
-	},
-
-	"under surveillance" : {
-		"in a prison" : 1,
-		"as an hostage" : 2
-	},
-
-	"against" : {
-		"online racism" : {
-			"using your own secret code" : 1,
-			"trolling them IRL" : 2
-		}
-	},
-
-	"beyond" : {
-		"borders" : {
-			"attaching USB sticks onto balloons" : 1,
-			"using carrier pigeons" : 2,
-			"building loudspeakers walls" : 3
-		},
-		"language and culture barriers" : {
-			"learning communication patterns to avoid dramas" : 1,
-			"using illustrations" : 2,
-			"being prepared to face your counterpart" : 3
-		}
-	},
-
-	"from" : {
-		"the middle of the sea" : {
-			"sending a message in a bottle" : 1,
-			"using semaphore flags" : 2
-		}
-	}
-}
-
-var stories = [
-	//0
-	{	
-		'title'   : 'Ear and tongue sensors combine to understand "silent speech"',
-		'url'     : 'https://www.newscientist.com/article/dn28504-ear-and-tongue-sensors-combine-to-understand-silent-speech/',
-		'date'    : '18 November 2015',
-		'author'  : 'Aviva Rutkin',
-		'content' : '<p>Read my lips. A new invention can recognise “silent speech” by keeping tabs on your tongue and ears.</p><p>By training it to recognise useful phrases, it could allow people who are disabled or work in loud environments to quietly control wearable devices.</p><p>The new device relies in part on a <a href="/article/dn24664-piercing-steers-wheelchairs-with-a-flick-of-the-tongue">magnetic tongue control system, </a>previously designed to help people with paralysis drive a power wheelchair via tongue movements.</p><p></p><p></p><p>But the researchers were concerned that the technology – which relies on a magnetic tongue piercing or a sensor affixed to the tongue – might be too invasive for some users.</p><p><a href="http://www.cc.gatech.edu/home/thad/">Thad Starner, </a>a professor at the Georgia Institute of Technology and technical lead on the wearable computer <a href="/article/mg21929364">Google Glass</a>, was inspired to try tracking ear movements after a dentist’s appointment. The dentist stuck a finger in Starner’s ear and asked him to bite down, a quick test for jaw function. As his jaw moved, so too did the space in his ears.</p><p>“I said, well, that’s cool. I wonder if we can do silent speech recognition with that?” says Starner.</p><h2>Infrared ear sensor</h2><p>The resulting device combines tongue control with earpieces that look somewhat like headphones. Each is embedded with a proximity sensor that uses infrared light to map the changing shape of ear canal. Different words require different jaw movements, deforming the canal in slightly different ways.</p><p>As a test, the team listed 12 phrases that might be required, such as “I need to use the bathroom” or “Give me my medicine, please”. People were then recorded repeating these while wearing the device.</p><p>With both the tongue and ear trackers in, the software recognised what the wearer was saying 90 per cent of the time. Using ear trackers alone, the accuracy was slightly lower (<i>IEEE Computer</i>, DOI: 10.1109/MC.2015.310).</p><h2>‘Jaw-emes’</h2><p>The researchers hope to build up a phrasebook of useful words and sentences recognisable just from the ear data. “We’re trying to figure out the fundamental parts of speech we can recognise. We call them ‘jaw-emes’,” says <a href="https://research.cc.gatech.edu/ccg/?q=user/abdelkareem-bedri">Abdelkareem Bedri</a>, a graduate student at Georgia Tech.</p><p>In addition, they’ve started looking into other potential uses for the ear data. One experiment with a modified version of the ear trackers reached 96 per cent accuracy in recognising simple jaw gestures, like a move from left to right. Such gestures could let the wearer discreetly control a wearable device. Heartbeat monitoring also seems feasible, and could help the system verify it is placed correctly in the wearer’s ear.</p><p><a href="https://www.neurones.espci.fr/denby/">Bruce Denby </a>works on silent speech in his lab at the Pierre and Marie Curie University in Paris. He says that demonstrating that the technology is “industry ready” will be key to bringing the technology to the market place.</p><p>“The true holy grail of silent speech is continuous speech recognition,” says Denby, but the ability to recognise even a limited set of phrases is already a tremendous boon for some disabled individuals, he adds.</p><p><i>(Image: Ryan McVay/Getty)</i></p>',
-		'images'  : [
-			'https://d1o50x50snmhul.cloudfront.net/wp-content/uploads/2015/11/dn28504-1_800.jpg'
-		]
-	},
-	//1
-	{	
-		"url":"http://www.atlasobscura.com/articles/you-can-call-this-number-if-you-want-to-talk-to-a-random-swede?utm_source=twitter&utm_medium=atlas-page",
-		"title":"You can call this number if you want to talk to a random swede"
-	},
-	//2
-	{	
-		"url":"http://www.bbc.com/news/blogs-trending-37233913",
-		"title":"You can call this number if you want to talk to a random swede"
-	},
-	//3
-	{	
-		"url":"http://www.wired.co.uk/article/brain-to-text-tech-lets-computers-read-your-thoughts",
-		"title":"You can call this number if you want to talk to a random swede"
-	},
-	//4
-	{	
-		"url":"https://www.wsj.com/articles/SB10001424127887323854904578638330635878760",
-		"title":"You can call this number if you want to talk to a random swede"
-	}
+var font_size_base = 24;
+var parameters = [
+  "space",
+  "time",
+  "message",
+  "medium",
+  "recipient",
 ];
 
-var font_size_base = 48;
+var choices_pool = [];
+var choices_pool_2 = [];
+
+var choice1 = {
+  "idStory": "",
+  "parameter": "",
+  "value": "",
+};
+
+var choice2 = {
+  "idStory": "",
+  "parameter": "",
+  "value": "",
+};
+
+var choice_2;
+
+var stories_pool = []; // 1, 3, ..., 7
+var stories_pool = []; // 1, 3, ..., 7
 
 $(document).ready(function() {
-	setTimeout(function(){
-		// $('.js-intro').children().each(function(i) {
-		// 	var that = this;
-		// 	var content = $(this).data('content');
-		// 	setTimeout(function(){
-		// 		shuffleLetters(that, {
-		// 			text: content,
-		// 			step: 4, // How many times should the letters be changed
-		// 			fps: 15 // Frames Per Second
-		// 		});
-		// 	}, 500 * i);
-		// });
-
-		Typed.new('.js-intro', {
-	        strings: [
-	        	"Explore ^1000 your choices.",
-	        	"Learn ^1000 the tools to communicate.",
-	        	"Find ^1000 the way to exchange..."
-        	],
-	        typeSpeed: 100,
-	        backDelay: 1000
-	      });
-	}, 2000);
-
-  	init();
+    init();
 });
 
 function init() {
-	// Generate initial custom select
-	$('#js-container').append('<span>' + 'How to communicate ' + '</span>');
+  // Loop through stories
+  for (var i = 0; i < stories_2.length; i++) {
+    var story = stories_2[i];
 
-	var t = makeSelect(stories_map);
+    // Build initial choices pool
+    makeChoicesPool(story, choices_pool);
+  }
 
-	$('#js-container').append(t);
+  // Pick a random 1st choice
+  choice1.value = pickRandomValue(choices_pool);
 
-	$(document).on('click', '.select', function(e) {
-		$(this).toggleClass('select--closed');
-	});
+  // Pick a story containing it
+  // looping through each stories that contain 1st choice
+  for (var i = 0; i < stories_2.length; i++) {
+    var story = stories_2[i];
+    var temp_pool = [];
 
-	$(document).on('click', '.select:not(.select--closed) .select__option', function(e) {
-		var select = $(this).parent();
+    makeChoicesPool(story, temp_pool);
 
-		// Stop if clicked option is default
-		if ($(this).hasClass('select__option--default')) {
-			return;
-		}
+    // If story contains 1st choice
+    if ( temp_pool.indexOf(choice1.value) >= 0 ) {
+      stories_pool.push(i); // Store index of story into stories pool
+    }
+  }
 
-		// Select clicked option and put it as first child
-		select.find('.select__option--selected').removeClass('select__option--selected');
-		$(this).addClass('select__option--selected').prependTo($(this).parent());
+  choice1.idStory = pickRandomValue(stories_pool);
 
-		// Remove default option
-		select.find('.select__option--default').remove();
+  // Loop through story keys
+  var story_1 = stories_2[choice1.idStory];
+  for (var key in story_1) {
+    if ( story_1.hasOwnProperty(key) ) {
+      // If key value contains choice
+      if ( story_1[key].indexOf(choice1.value) >= 0 ) {
+        choice1.parameter = key;
+        console.log("choice1.parameter : ", choice1.parameter);
+      }
+    }
+  }
 
-		// Recompute select height since default option may have been removed
-		select.height(select.find('.select__option').length * font_size_base);
-		updateSelect(select);
-	});
+  // reset var
+  stories_pool = [];
+
+  // Get parent parameter
+
+  // Append 1st choice
+  $('#js-container').append('<span id="choice_1" class="choice random">' + choice1.value + '</span>');
+
+
+  // Build related stories pool
+  // looping through each stories that contain 1st choice
+  for (var i = 0; i < stories_2.length; i++) {
+    var story = stories_2[i];
+    var temp_pool = [];
+
+    makeChoicesPool(story, temp_pool);
+
+    // If story contains 1st choice
+    if ( temp_pool.indexOf(choice1.value) >= 0 ) {
+      stories_pool.push(i); // Store index of story into stories pool
+    }
+  }
+
+  // Pick random 2nd choice
+  while ( !choice2.value ) {
+    var randomStory = pickRandomValue(stories_pool);
+    console.log("randomStory for choice 2 : ", randomStory);
+    // build choice from picked story
+    var temp_choices = [];
+    makeChoicesPool(stories_2[randomStory], temp_choices);
+    var temp_choice = pickRandomValue(temp_choices);
+
+    if ( temp_choice != choice1.value ) {
+      choice2.value = temp_choice;
+      console.log("choice2.value : ", choice2.value);
+    }
+  }
+
+  // Append 2nd choice
+  $('#js-container').append('<span id="choice_2" class="choice random">' + choice2.value + '</span>');
+}
+
+function makeChoicesPool(story, array) {
+  // Loop through story keys
+  for (var key in story) {
+    if ( story.hasOwnProperty(key) ) {
+      // If key is a parameter
+      if ( parameters.indexOf(key) >= 0 ) {
+        concatChoices(story[key], array);
+      }
+    }
+  }
+}
+
+function getParentParameter(key, obj){
+  return ;
+} 
+
+
+
+
+
+/**
+ * Helper functions
+ */
+
+
+// Return a random value from an array
+function pickRandomValue(array) {
+  return array[Math.floor(Math.random()*array.length)];
+}
+
+// Concat -array of strings or -string into a source array
+function concatChoices(key, array) {
+  if (key.length && !isEmpty(key)) {
+    if ( Array.isArray(key) ) { // If it's an array
+      for (var i = 0; i < key.length; i++) {
+        array.push(key[i]);
+      }
+    } else if ( isString(key) ) { // Else if it's a string
+      array.push(key);
+    }
+  }
+}
+
+// Check if object is empty
+function isEmpty(data) {
+  return (!data || 0 === data.length);
+}
+
+// Check if object is a string
+function isString(data) {
+  return (typeof data === 'string' || data instanceof String);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function init2() {
+  // Generate initial custom select
+  $('#js-container').append('<span>' + 'How to communicate ' + '</span>');
+
+  var t = makeSelect(stories_map);
+
+  $('#js-container').append(t);
+
+  // Open/close select on click
+  $(document).on('click', '.select', function(e) {
+    $(this).toggleClass('select--closed');
+  });
+
+  $(document).on('click', '.select:not(.select--closed) .select__option', function(e) {
+    var select = $(this).parent();
+
+    // Stop if clicked option is default
+    if ($(this).hasClass('select__option--default')) {
+      return;
+    }
+
+    // Select clicked option and put it as first child
+    select.find('.select__option--selected').removeClass('select__option--selected');
+    $(this).addClass('select__option--selected').prependTo(select);
+
+    // Remove default option
+    select.find('.select__option--default').remove();
+
+    // Recompute select height since default option may have been removed
+    select.height(select.find('.select__option').length * font_size_base);
+    updateSelect(select);
+  });
 }
 
 function updateSelect(select) {
-	var t = stories_map;
-	select.parent().nextAll().remove();
-	$('#js-story').empty();
+  var t = stories_map;
+  select.parent().nextAll().remove();
+  $('#js-story').empty();
 
-	$('.select').each(function(key, s) {
-		var selected = $(this).find('.select__option--selected').text();
-		var s = $(this).html();
-		
-		t = t[selected];
-		console.log(t);
+  $('.select').each(function(key, s) {
+    var selected = $(this).find('.select__option--selected').text();
+    var s = $(this).html();
+    
+    t = t[selected];
+    console.log(t);
 
-		if (s == select.html()) {
-			console.log('equal');
-			if (jQuery.isPlainObject(t)) {
-				var ss = makeSelect(t);
-				$('#js-container').append(ss);
-				return;
-			} else {
-				console.log(stories[t].url);
-				var scrapped_story = '';
-				if (stories[t].title) {
-					scrapped_story += '<h1 class="story__title">' + stories[t].title + '</h1>';
-				}
-				if (stories[t].date) {
-					scrapped_story += '<small class="story__date">' + stories[t].date + '</small>';
-				}
-				if (stories[t].author) {
-					scrapped_story += '<small class="story__author">' + stories[t].author + '</small>';
-				}
-				if (stories[t].content) {
-					scrapped_story += '<div class="story__content">' + stories[t].content + '</div>';
-				}
-				console.log('scrapped_story : ', scrapped_story);
+    if (s == select.html()) {
+      console.log('equal');
+      if (jQuery.isPlainObject(t)) {
+        var ss = makeSelect(t);
+        $('#js-container').append(ss);
+        return;
+      } else {
+        console.log(stories[t].url);
+        var scrapped_story = '';
+        if (stories[t].title) {
+          scrapped_story += '<h1 class="story__title">' + stories[t].title + '</h1>';
+        }
+        if (stories[t].date) {
+          scrapped_story += '<small class="story__date">' + stories[t].date + '</small>';
+        }
+        if (stories[t].author) {
+          scrapped_story += '<small class="story__author">' + stories[t].author + '</small>';
+        }
+        if (stories[t].content) {
+          scrapped_story += '<div class="story__content">' + stories[t].content + '</div>';
+        }
+        console.log('scrapped_story : ', scrapped_story);
 
-				$('#js-story').empty().append(scrapped_story);
-
-				// $('#js-story').children().each(function() {
-				// 	var content = $(this).data('content');
-				// 	shuffleLetters(this, {
-				// 		text: content,
-				// 		step: 1, // How many times should the letters be changed
-				// 		fps: 15 // Frames Per Second
-				// 	});
-				// });
-			}
-		} else {
-			console.log('n-equal');
-		}
-	});
+        $('#js-story').empty().append(scrapped_story);
+      }
+    } else {
+      console.log('n-equal');
+    }
+  });
 }
 
 function makeSelect(obj) {
-	var t = $('<div class="select select--closed"></div>');
+  var t = $('<div class="select select--closed"></div>');
 
-	// Create default option
-	t.append('<div class="select__option select__option--default" data-value="" data-disabled="true" data-selected="true" disabled selected> </div>');
-	var options_count = 1;
-	// Create options
-	for (var key in obj) {
-		t.append('<div class="select__option" data-value="' + key + '">' + key + '</div>');
-		options_count++;
-	}
+  // Create default option
+  t.append('<div class="select__option select__option--default" data-value="" data-disabled="true" data-selected="true" disabled selected> </div>');
+  var options_count = 1;
+  // Create object options
+  for (var key in obj) {
+    t.append('<div class="select__option" data-value="' + key + '">' + key + '</div>');
+    options_count++;
+  }
 
-	// Compute height
-	t.height(options_count * font_size_base);
+  // Compute element height
+  t.height(options_count * font_size_base);
 
-	var output = $('<div class="select__wrapper"></div>').append(t);
+  var output = $('<div class="select__wrapper"></div>').append(t);
 
-	// Return builded custom select
-	return output;
+  // Return builded custom select
+  return output;
 }
