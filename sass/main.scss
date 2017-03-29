@@ -9,8 +9,12 @@ $color-background    : #fff;
 $color-text          : #000;
 $color-hover         : #333;
 
+$color-blue: rgb(0, 0, 255);
+$color-gray: rgb(153, 153, 153);
+
 // Reset
 @import "_reset.scss";
+@import "compass";
 
 // Font scaling
 html {
@@ -60,106 +64,44 @@ small, .font_small {
 
 .choice {
 	padding-left: 10px;
+	color: $color-gray;
 
-	&.random {
-		color: gray;
+	cursor: pointer;
+	user-select: none;
+	@include transition(color, .4s, linear);
+
+	&:before {
+		content: '[';
+	}
+
+	&:after {
+		content: ']';
+	}
+
+	&:before,
+	&:after,
+	&:hover {
+		color: $color-blue;
 	}
 }
 
-.intro-wrapper {
-	box-sizing: border-box;
-
-	padding: $font-size-base;
-	min-height: 100vh;
-
-	font-size: $font-size-base * 2;
-}
-
-// Blinking cursor
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
-.select-container {
-	min-height: 100vh;
+.button-container {
 	padding: $font-size-base;
 	box-sizing: border-box;
 
 	font-size: $font-size-base;
 	line-height: $font-size-base  * 1.5;
 	font-family: $font-family;
-
-	z-index: 100;
 }
 
-.select {
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
-
-	overflow: hidden;
-	cursor: pointer;
-	user-select: none;
-
-	transition: all .2s ease;
-
-	&:after {
-		position: absolute;
-		display: block;
-		content: '';
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 1px;
-
-		background-color: $color-text;
-
-		transition: all .2s ease;
-	}
-
-	&.select--closed {
-		height: $font-size-base !important;
-	}
-
-	.select__option {
-		height: $font-size-base;
-	    line-height: $font-size-base;
-		box-sizing: border-box;
-		transition: color .3s ease;
-
-		&:hover {
-			color: $color-hover;
-		}
-
-		&.select__option--default {}
-	}
-}
-
-.select + .select {
+.stories-container {
+	padding: $font-size-base;
 }
 
 .story {
-	padding: 1.414em 0;
-	max-width: 700px;
 	margin: auto;
+	color: $color-gray;
+	cursor: pointer;
 
 	.story__title {
 	}

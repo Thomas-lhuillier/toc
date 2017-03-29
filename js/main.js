@@ -35,6 +35,26 @@ $(document).ready(function() {
 });
 
 function init() {
+  randomize_1st();
+  randomize_2nd();
+
+  $(document).on('click', '#choice_1', function() {
+    randomize_1st();
+    randomize_2nd();
+  });
+
+  $(document).on('click', '#choice_2', function() {
+    randomize_2nd();
+  });
+
+  display_stories();
+}
+
+function randomize_1st() {
+  // @TODO keep prev choice, and prevent gettings the same result.
+  // Reset var
+  choice1 = [];
+
   // Loop through stories
   for (var i = 0; i < stories_2.length; i++) {
     var story = stories_2[i];
@@ -50,8 +70,13 @@ function init() {
   choice1.value     = random1[2];
 
   // Append 1st choice
-  $('#js-container').append('<span id="choice_1" class="choice random">' + choice1.value + '</span>');
+  $('#choice_1').html(choice1.value);
+}
 
+function randomize_2nd() {
+  // @TODO keep prev choice, and prevent gettings the same result.
+  // Reset var
+  choice2 = [];
 
   // Build related stories pool
   stories_pool = [];
@@ -71,8 +96,6 @@ function init() {
     }
   }
 
-  console.log(stories_pool);
-
   // Pick random 2nd choice
   while ( !choice2.value ) {
     var randomStory = pickRandomValue(stories_pool);
@@ -90,7 +113,7 @@ function init() {
   }
 
   // Append 2nd choice
-  $('#js-container').append('<span id="choice_2" class="choice random">' + choice2.value + '</span>');
+  $('#choice_2').html(choice2.value);
 }
 
 function makeChoicesPool(story, array) {
@@ -100,6 +123,13 @@ function makeChoicesPool(story, array) {
       // If key is a parameter
       concatChoices(story.id, key, story[key], array);
     }
+  }
+}
+
+function display_stories() {
+  for (var i = 0; i < stories_2.length; i++) { // Loop through story list
+    var story = stories_2[i];
+    $('#js-stories').append('<li class="story">'+story.title+'</li>');
   }
 }
 

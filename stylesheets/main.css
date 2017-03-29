@@ -54,12 +54,12 @@ table {
   border-spacing: 0;
 }
 
-/* line 16, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 html {
   font-size: 1em;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 body {
   font-size: 24px;
   line-height: 1.45;
@@ -68,12 +68,12 @@ body {
   background-color: #fff;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 p {
   margin-bottom: 1.3em;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
@@ -81,146 +81,77 @@ h1, h2, h3, h4 {
   font-family: "Gentium Book Basic", serif;
 }
 
-/* line 40, ../sass/main.scss */
+/* line 44, ../sass/main.scss */
 h1 {
   margin-top: 0;
   font-size: 3.157em;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 h2 {
   font-size: 2.369em;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 h3 {
   font-size: 1.777em;
 }
 
-/* line 53, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 h4 {
   font-size: 1.333em;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 small, .font_small {
   font-size: 0.75em;
 }
 
-/* line 61, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .choice {
   padding-left: 10px;
+  color: #999999;
+  cursor: pointer;
+  user-select: none;
+  -moz-transition: color, 0.4s, linear;
+  -o-transition: color, 0.4s, linear;
+  -webkit-transition: color, 0.4s, linear;
+  transition: color, 0.4s, linear;
 }
-/* line 64, ../sass/main.scss */
-.choice.random {
-  color: gray;
+/* line 73, ../sass/main.scss */
+.choice:before {
+  content: '[';
+}
+/* line 77, ../sass/main.scss */
+.choice:after {
+  content: ']';
+}
+/* line 81, ../sass/main.scss */
+.choice:before, .choice:after, .choice:hover {
+  color: blue;
 }
 
-/* line 69, ../sass/main.scss */
-.intro-wrapper {
-  box-sizing: border-box;
-  padding: 24px;
-  min-height: 100vh;
-  font-size: 48px;
-}
-
-/* line 79, ../sass/main.scss */
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* line 101, ../sass/main.scss */
-.select-container {
-  min-height: 100vh;
+/* line 88, ../sass/main.scss */
+.button-container {
   padding: 24px;
   box-sizing: border-box;
   font-size: 24px;
   line-height: 36px;
   font-family: "Poppins", serif;
-  z-index: 100;
 }
 
-/* line 113, ../sass/main.scss */
-.select {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  transition: all .2s ease;
-}
-/* line 124, ../sass/main.scss */
-.select:after {
-  position: absolute;
-  display: block;
-  content: '';
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #000;
-  transition: all .2s ease;
-}
-/* line 138, ../sass/main.scss */
-.select.select--closed {
-  height: 24px !important;
-}
-/* line 142, ../sass/main.scss */
-.select .select__option {
-  height: 24px;
-  line-height: 24px;
-  box-sizing: border-box;
-  transition: color .3s ease;
-}
-/* line 148, ../sass/main.scss */
-.select .select__option:hover {
-  color: #333;
+/* line 97, ../sass/main.scss */
+.stories-container {
+  padding: 24px;
 }
 
-/* line 159, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 .story {
-  padding: 1.414em 0;
-  max-width: 700px;
   margin: auto;
+  color: #999999;
+  cursor: pointer;
 }
-/* line 167, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 .story .story__author {
   float: right;
 }
