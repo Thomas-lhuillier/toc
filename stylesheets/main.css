@@ -54,26 +54,26 @@ table {
   border-spacing: 0;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 html {
   font-size: 1em;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 27, ../sass/main.scss */
 body {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.45;
   font-family: "Poppins", serif;
   color: #000;
   background-color: #fff;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 p {
   margin-bottom: 1.3em;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
@@ -81,34 +81,52 @@ h1, h2, h3, h4 {
   font-family: "Gentium Book Basic", serif;
 }
 
-/* line 44, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 h1 {
   margin-top: 0;
   font-size: 3.157em;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 h2 {
   font-size: 2.369em;
 }
 
-/* line 53, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 h3 {
   font-size: 1.777em;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 h4 {
   font-size: 1.333em;
 }
 
-/* line 61, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 small, .font_small {
   font-size: 0.75em;
 }
 
-/* line 65, ../sass/main.scss */
-.choice {
+/* line 68, ../sass/main.scss */
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 42px;
+  margin-right: 21px;
+  margin-bottom: 42px;
+  margin-left: 21px;
+  padding-bottom: 21px;
+  box-sizing: border-box;
+  font-size: 21px;
+  line-height: 31.5px;
+  font-family: "Poppins", serif;
+  border-bottom-width: 3px;
+  border-color: blue;
+  border-style: solid;
+}
+
+/* line 87, ../sass/main.scss */
+.btn-choice {
   padding-left: 10px;
   color: #999999;
   cursor: pointer;
@@ -118,40 +136,100 @@ small, .font_small {
   -webkit-transition: color, 0.4s, linear;
   transition: color, 0.4s, linear;
 }
-/* line 73, ../sass/main.scss */
-.choice:before {
+/* line 95, ../sass/main.scss */
+.btn-choice:before {
   content: '[';
 }
-/* line 77, ../sass/main.scss */
-.choice:after {
+/* line 99, ../sass/main.scss */
+.btn-choice:after {
   content: ']';
 }
-/* line 81, ../sass/main.scss */
-.choice:before, .choice:after, .choice:hover {
+/* line 103, ../sass/main.scss */
+.btn-choice:before, .btn-choice:after, .btn-choice:hover {
   color: blue;
 }
+/* line 109, ../sass/main.scss */
+.btn-choice.disabled {
+  cursor: default;
+}
+/* line 111, ../sass/main.scss */
+.btn-choice.disabled:before, .btn-choice.disabled:after {
+  content: '';
+}
+/* line 115, ../sass/main.scss */
+.btn-choice.disabled:hover {
+  color: #999999;
+}
 
-/* line 88, ../sass/main.scss */
-.button-container {
-  padding: 24px;
-  box-sizing: border-box;
-  font-size: 24px;
-  line-height: 36px;
+/* line 121, ../sass/main.scss */
+.btn-shuffle {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  font-size: 13px;
   font-family: "Poppins", serif;
+  font-weight: 700;
+  color: blue;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 .stories-container {
-  padding: 24px;
+  padding: 21px;
 }
 
-/* line 101, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .story {
+  position: relative;
   margin: auto;
+  padding-left: 25px;
+  font-size: 23px;
+  font-family: "Gentium Book Basic", serif;
+  font-weight: 700;
   color: #999999;
   cursor: pointer;
 }
-/* line 109, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
+.story.clone {
+  color: #000 !important;
+}
+/* line 155, ../sass/main.scss */
+.story.clone .story__title:before {
+  background-color: blue;
+}
+/* line 160, ../sass/main.scss */
+.story.hidden {
+  display: none;
+}
+/* line 165, ../sass/main.scss */
+.story .story__title:before {
+  position: absolute;
+  left: 0;
+  top: calc(23px / 2);
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #999999;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 178, ../sass/main.scss */
+.story .story__title:hover {
+  color: #000;
+}
+/* line 180, ../sass/main.scss */
+.story .story__title:hover:before {
+  background-color: blue;
+}
+/* line 186, ../sass/main.scss */
 .story .story__author {
   float: right;
 }

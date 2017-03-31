@@ -2,8 +2,11 @@
 $font-family         : 'Poppins', serif;
 $font-family-display : 'Gentium Book Basic', serif;
 
-$font-size-base      : 24px;
+$font-size-base      : 21px;
 $line-height-base    : 1.45;
+
+$regular             : 400;
+$bold                : 700;
 
 $color-background    : #fff;
 $color-text          : #000;
@@ -62,7 +65,26 @@ small, .font_small {
 	font-size: 0.75em;
 }
 
-.choice {
+.button-container {
+	position: relative;
+	display: inline-block;
+	margin-top: 2*$font-size-base;
+	margin-right: $font-size-base;
+	margin-bottom: 2*$font-size-base;
+	margin-left: $font-size-base;
+	padding-bottom: $font-size-base;
+	box-sizing: border-box;
+
+	font-size: $font-size-base;
+	line-height: $font-size-base  * 1.5;
+	font-family: $font-family;
+
+	border-bottom-width: 3px;
+	border-color: $color-blue;
+	border-style: solid;
+}
+
+.btn-choice {
 	padding-left: 10px;
 	color: $color-gray;
 
@@ -83,15 +105,35 @@ small, .font_small {
 	&:hover {
 		color: $color-blue;
 	}
+
+	&.disabled {
+		cursor: default;
+		&:before,
+		&:after {
+			content: '';
+		}
+		&:hover {
+			color: $color-gray;
+		}
+	}
 }
 
-.button-container {
-	padding: $font-size-base;
-	box-sizing: border-box;
+.btn-shuffle {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: -30px;
 
-	font-size: $font-size-base;
-	line-height: $font-size-base  * 1.5;
+	font-size: 13px;
 	font-family: $font-family;
+	font-weight: $bold;
+
+	color: $color-blue;
+	background: none;
+
+	border: none;
+	outline: none;
+	cursor: pointer;
 }
 
 .stories-container {
@@ -99,11 +141,46 @@ small, .font_small {
 }
 
 .story {
+	position: relative;
 	margin: auto;
+	padding-left: 25px;
+	font-size: 23px;
+	font-family: $font-family-display;
+	font-weight: $bold;
 	color: $color-gray;
 	cursor: pointer;
 
+	&.clone {
+		color: #000 !important;
+		.story__title:before {
+			background-color: $color-blue;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+
 	.story__title {
+		&:before {
+			position: absolute;
+			left: 0;
+			top: calc(23px / 2);
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			background-color: $color-gray;
+			@include border-radius(100%);
+		}
+		&:hover {
+			color: #000;
+			&:before {
+				background-color: $color-blue;
+			}
+		}
 	}
 	.story__date {}
 	.story__author {

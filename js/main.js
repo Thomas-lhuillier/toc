@@ -37,22 +37,31 @@ $(document).ready(function() {
 function init() {
   randomize_1st();
   randomize_2nd();
+  display_stories();
+  update_stories();
 
   $(document).on('click', '#choice_1', function() {
     randomize_1st();
     randomize_2nd();
+    update_stories();
   });
 
-  $(document).on('click', '#choice_2', function() {
+  $(document).on('click', '#choice_2:not(.disabled)', function() {
     randomize_2nd();
+    update_stories();
   });
 
-  display_stories();
+  $(document).on('click', '#shuffle', function() {
+    randomize_1st();
+    randomize_2nd();
+    update_stories();
+  });
 }
 
 function randomize_1st() {
   // @TODO keep prev choice, and prevent gettings the same result.
   // Reset var
+  choices_pool = [];
   choice1 = [];
 
   // Loop through stories
@@ -129,7 +138,47 @@ function makeChoicesPool(story, array) {
 function display_stories() {
   for (var i = 0; i < stories_2.length; i++) { // Loop through story list
     var story = stories_2[i];
-    $('#js-stories').append('<li class="story">'+story.title+'</li>');
+    $('#js-stories').append('<li class="story" data-id="'+story.id+'"><span class="story__title">'+story.title+'</span></li>');
+  }
+}
+
+
+var selected_stories;
+function update_stories() {
+  selected_stories = [];
+  for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
+    if ( choices_pool[i][2] == choice2.value ) {  // if choice value = choice1.value
+      var story = stories_2[choice1.idStory];
+      var isValid = false;
+      for (var key in story) { // if this story contains choice2.value
+        if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) && story[key].indexOf(choice1.value) >= 0 ) {
+          isValid = true;
+        }
+      }
+      if (isValid) {
+        selected_stories.push(choices_pool[i][0]);
+      }
+    }
+  }
+  // disable / enable 2nd choice
+  // if ( selected_stories.length == 1 ) {
+  //   $('#choice_2').addClass('disabled');
+  // } else {
+  //   $('#choice_2').removeClass('disabled');
+  // }
+
+  // clean previous
+  $('.clone').remove();
+  $('.hidden').removeClass('hidden');
+
+  // display new ones
+  for (var i = 0; i < selected_stories.length; i++) {
+    var idStory = selected_stories[i];
+    var stories = $('#js-stories').find("[data-id='"+idStory+"']");
+    stories.each(function() {
+      var clone = $(this).clone().addClass('clone').prependTo('#js-stories');
+      $(this).addClass('hidden');
+    });
   }
 }
 
