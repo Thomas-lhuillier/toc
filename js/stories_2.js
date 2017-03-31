@@ -208,6 +208,7 @@ var stories_2 = [
     "message"  : ["about political disagreements", "about human rights"],
     "medium"   : ["using balloons and USB drives", "using balloons", "using USB drives"],
     "recipient": "with North Korea’s inhabitants",
+    "constraint": "across borders",
     "keywords" : ["across borders"],
 
     "access"   : "",
@@ -322,6 +323,7 @@ var stories_2 = [
     "message"  : "",
     "medium"   : ["using lip reading software", "using artificial intelligence"],
     "recipient": ["with someone hearing impaired", "with a mute person"],
+    "constraint": "without speaking",
     "keywords" : "",
 
     "access"   : "",
@@ -341,6 +343,7 @@ var stories_2 = [
     "message"  : "",
     "medium"   : ["using brainwaves", "using thoughts"],
     "recipient": ["with machines", "with computers"],
+    "constraint": "without speaking",
     "keywords" : "man to machine communication",
 
     "access"   : "",
@@ -360,6 +363,7 @@ var stories_2 = [
     "message"  : "",
     "medium"   : "using ear and tongue sensors",
     "recipient": ["with someone hearing impaired", "with a mute person"],
+    "constraint": "without speaking",
     "keywords" : "silent speech",
 
     "access"   : "",
@@ -398,6 +402,7 @@ var stories_2 = [
     "message"  : "",
     "medium"   : ["using brainwaves", "using thoughts"],
     "recipient": "",
+    "constraint": "without speaking",
     "keywords" : ["brain to brain communication", "man to machine communication", "telepathy"],
 
     "access"   : "",
@@ -478,7 +483,182 @@ var stories_2 = [
 
     "access"   : "",
     "image"    : ""
+  },
+  {
+    "id"       : 25,
+    "title"    : "Why are party symbols like the bicycle so important in Indian elections?",
+    "url"      : "http://blogs.wsj.com/indiarealtime/2017/01/18/why-are-party-symbols-like-the-bicycle-so-important-in-indian-elections/",
+    "source"   : "The Wall Street Journal",
+    "media"    : "article",
+    "author"   : "Krishna Pokharel",
+    "date"     : "18.01.2017",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : "about political parties",
+    "medium"   : "using symbols",
+    "recipient": "with someone illiterate",
+    "constraint": "beyond language barriers",
+    "keywords" : ["symbols", "politics parties"],
+
+    "access"   : "",
+    "image"    : ""
+  },
+  // {
+  //   "id"       : 26,
+  //   "title"    : "Why BlackBerry Messenger was rioters' communication method of choice",
+  //   "url"      : "https://www.theguardian.com/uk/2011/dec/07/bbm-rioters-communication-method-choice",
+  //   "source"   : "The Guardian",
+  //   "media"    : "article",
+  //   "author"   : "James Ball and Symeon Brown",
+  //   "date"     : "07.12.2011",
+    
+  //   "space"    : "",
+  //   "time"     : "",
+  //   "message"  : "using Blackberry Messenger Network",
+  //   "medium"   : "",
+  //   "recipient": "",
+  //   "keywords" : ["riots", "encrypted information network"],
+
+  //   "access"   : "",
+  //   "image"    : ""
+  // },
+  {
+    "id"       : 27,
+    "title"    : "Point me where that hurts",
+    "url"      : "https://worksthatwork.com/1/kwikpoint/share/213c3ea5f5e209eb2731ca174ec90572",
+    "source"   : "Works that Works",
+    "media"    : "article",
+    "author"   : "Barbara Eldredge",
+    "date"     : "2013",
+    
+    "space"    : ["in Iraq", "in Afghanistan"],
+    "time"     : "",
+    "message"  : ["about war situations", "about military situations"],
+    "medium"   : ["using graphic design", "using illustrations"],
+    "recipient": "with locals",
+    "constraint": ["beyond language and culture barriers", "on the battlefield"],
+    "keywords" : "visual communication",
+
+    "access"   : "https://www.kwikpoint.com/",
+    "image"    : ""
+  },
+  {
+    "id"       : 28,
+    "title"    : "You can call this number if you want to talk to a random Swede",
+    "url"      : "http://www.atlasobscura.com/articles/you-can-call-this-number-if-you-want-to-talk-to-a-random-swede?utm_source=twitter&utm_medium=atlas-page",
+    "source"   : "Atlas Obscura",
+    "media"    : "article",
+    "author"   : "",
+    "date"     : "07.04.2016",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : "about anything",
+    "medium"   : "using telephone",
+    "recipient": "with a random Swede",
+    "keywords" : "campaign",
+
+    "access"   : "call at +46 771 793 336",
+    "image"    : ""
+  },
+  {
+    "id"       : 29,
+    "title"    : "Voyager Golden Record",
+    "url"      : "https://en.wikipedia.org/wiki/Voyager_Golden_Record",
+    "source"   : "Wikipedia",
+    "media"    : "article",
+    "author"   : "",
+    "date"     : "",
+    
+    "space"    : "in interstellar space",
+    "time"     : "",
+    "message"  : "about life on earth",
+    "medium"   : "using a record",
+    "constraint": ["beyond language barriers", "beyond cultural barriers", "beyond language and cultural barriers"],
+    "recipient": "with extraterrestrial life forms",
+    "keywords" : "",
+
+    "access"   : "",
+    "image"    : ""
+  },
+  {
+    "id"       : 30,
+    "title"    : "Brazilian activists shame web trolls on billboards",
+    "url"      : "http://www.pcmag.com/article2/0,2817,2495962,00.asp",
+    "source"   : "PC mag",
+    "media"    : "article",
+    "author"   : "Stephanie Mlot",
+    "date"     : "01.12.2015",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : "about online racism",
+    "medium"   : ["using billboards", "using Twitter posts"],
+    "recipient": ["with web trolls", "with wide public"],
+    "keywords" : ["campaign", "trolling the trolls"],
+
+    "access"   : "",
+    "image"    : ""
+  },
+  {
+    "id"       : 31,
+    "title"    : "Message in bottle saves stranded migrants",
+    "url"      : "https://www.theguardian.com/world/2005/jun/01/1",
+    "source"   : "The Guardian",
+    "media"    : "article",
+    "author"   : "Marianela Jimenez",
+    "date"     : "01.06.2005",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : ["about a life threatening situation", "about a call for help"],
+    "medium"   : "using a message in a bottle",
+    "recipient": "",
+    "keywords" : "survival",
+
+    "access"   : "",
+    "image"    : ""
+  },
+  {
+    "id"       : 32,
+    "title"    : "People are putting ((( echoes ))) around their names on Twitter – here’s why",
+    "url"      : "http://metro.co.uk/2016/06/05/people-are-putting-echoes-around-their-names-on-twitter-heres-why-5925002/",
+    "source"   : "Metro News",
+    "media"    : "article",
+    "author"   : "Ashita Nagesh",
+    "date"     : "05.06.2016",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : ["about online racism", "about online antisemitism"],
+    "medium"   : ["using brackets", "using Twitter"],
+    "recipient": ["with  online Trolls", "with the wide public"],
+    "keywords" : "trolling the trolls",
+
+    "access"   : "put “ ((( ))) “ around your name on Twitter",
+    "image"    : ""
   }
+  // ,
+  // {
+  //   "id"       : 33,
+  //   "title"    : "Separating you and me? 4.74 degrees",
+  //   "url"      : "http://www.nytimes.com/2011/11/22/technology/between-you-and-me-4-74-degrees.html?_r=1&src=tp",
+  //   "source"   : "the New York Times",
+  //   "media"    : "article",
+  //   "author"   : "Somini Sengupta",
+  //   "date"     : "21.11.2011",
+    
+  //   "space"    : "",
+  //   "time"     : "",
+  //   "message"  : "",
+  //   "medium"   : "",
+  //   "recipient": "",
+  //   "keywords" : "",
+
+  //   "access"   : "",
+  //   "image"    : ""
+  // }
 ];
 
 
