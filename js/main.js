@@ -47,7 +47,7 @@ function init() {
     update_stories();
   });
 
-  $(document).on('click', '#choice_2:not(.disabled)', function() {
+  $(document).on('click', '#choice_2', function() { //#choice_2:not(.disabled)
     randomize_2nd();
     update_stories();
   });
@@ -64,6 +64,24 @@ function init() {
     }
     if (e.keyCode == 39) { //right arrow = click on 2nd choice
       $('#choice_2').trigger('click');
+    }
+  });
+
+  $(document).on('click', '.story', function() {
+    console.log('story clicked');
+    var id = $(this).data('id');
+    if (!isEmpty(stories_2[id].content)) {
+      console.log('display content');
+      // display story text
+      var output = "";
+      output += "<h2>";
+      output += stories_2[id].title;
+      output += "</h2>";
+      output += stories_2[id].content;
+      $('#js-story-overlay .content').empty().append(output).parent().addClass('expanded').fadeIn();
+      $('html').addClass('no-scroll');
+    } else if (!isEmpty(stories_2[id].url)) {
+      // Open link in new window
     }
   });
 
@@ -115,8 +133,13 @@ function randomize_1st() {
 }
 
 function randomize_2nd() {
+  console.clear();
+  console.log("randomize_2nd");
   // @TODO keep prev choice, and prevent gettings the same result.
   // Reset var
+  if (!isEmpty(choice2.value)) {
+    var prev_choice = choice2.value;
+  }
   choice2 = [];
 
   // Build related stories pool
@@ -137,6 +160,8 @@ function randomize_2nd() {
     }
   }
 
+  console.log(stories_pool);
+
   // Pick random 2nd choice
   while ( !choice2.value ) {
     var randomStory = pickRandomValue(stories_pool);
@@ -147,11 +172,16 @@ function randomize_2nd() {
     var temp_choice = pickRandomValue(temp_choices);
 
     if ( temp_choice[1] != choice1.parameter ) {
-      choice2.idStory   = temp_choice[0];
-      choice2.parameter = temp_choice[1];
-      choice2.value     = temp_choice[2];
+      console.log(temp_choices);
+      // if ( temp_choices.length > 1 && temp_choice[1] != prev_choice ) {
+        choice2.idStory   = temp_choice[0];
+        choice2.parameter = temp_choice[1];
+        choice2.value     = temp_choice[2];
+      // }
     }
   }
+
+  console.log(stories_pool);
 
   // Append 2nd choice
   $('#choice_2').html(choice2.value);
@@ -214,7 +244,7 @@ function update_stories() {
     }
   }
   // disable / enable 2nd choice
-  if ( stories_pool.length == 1 ) {
+  if ( stories_pool.length === 1 ) {
     $('#choice_2').addClass('disabled');
   } else {
     $('#choice_2').removeClass('disabled');

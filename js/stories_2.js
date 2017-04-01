@@ -16,7 +16,8 @@ var stories_2 = [
     "keywords" : ["protest symbol"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 1,
@@ -35,7 +36,8 @@ var stories_2 = [
     "keywords" : ["protest symbol"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 2,
@@ -54,7 +56,8 @@ var stories_2 = [
     "keywords" : ["protest symbol"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : "<p>ELIZA is an early natural language processing computer program created from 1964 to 1966 at the MIT Artificial Intelligence Laboratory by Joseph Weizenbaum. Created to demonstrate the superficiality of communication between man and machine, Eliza simulated conversation by using a 'pattern matching' and substitution methodology that gave users an illusion of understanding on the part of the program, but had no built in framework for contextualizing events. Directives on how to interact were provided by 'scripts', written originally in MAD-Slip, which allowed ELIZA to process user inputs and engage in discourse following the rules and directions of the script. The most famous script, DOCTOR, simulated a Rogerian psychotherapist and used rules, dictated in the script, to respond with non-directional questions to user inputs. As such, ELIZA was one of the first chatterbots, but was also regarded as one of the first programs capable of passing the Turing Test.</p><p>ELIZA's creator, Weizenbaum regarded the program as a method to show the superficiality of communication between man and machine, but was surprised by the number of individuals who attributed human-like feelings to the computer program, including Weizenbaum’s secretary. Many academics believed that the program would be able to positively influence the lives of many people, particularly those suffering from psychological issues and that it could aid doctors working on such patients’ treatment. While ELIZA was capable of engaging in discourse, ELIZA could not converse with true understanding. However, many early users were convinced of ELIZA’s intelligence and understanding, despite Weizenbaum’s insistence to the contrary.</p>"
   },
   {
     // 4
@@ -74,7 +77,8 @@ var stories_2 = [
     "keywords" : ["politics"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     // 5
@@ -94,7 +98,8 @@ var stories_2 = [
     "keywords" : ["adult-kids communication"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 5,
@@ -113,7 +118,8 @@ var stories_2 = [
     "keywords" : ["encoded communication"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 6,
@@ -132,7 +138,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "https://twitter.com/hashtag/brusselslockdown?src=hash",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 7,
@@ -151,7 +158,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 8,
@@ -170,7 +178,8 @@ var stories_2 = [
     "keywords" : ["secret communication"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 9,
@@ -189,7 +198,8 @@ var stories_2 = [
     "keywords" : ["across borders"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 10,
@@ -209,7 +219,8 @@ var stories_2 = [
     "keywords" : ["across borders"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 11,
@@ -228,7 +239,8 @@ var stories_2 = [
     "keywords" : ["hacking a network"],
 
     "access"   : "http://forum.rise.company/threads/24825-%D8%B7%D8%B1%D9%82-%D9%85%D8%AE%D8%AA%D9%84%D9%81%D8%A9-%D9%84%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA-How-to-Increase-the-Range-of-Your-Wifi",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 12,
@@ -247,7 +259,8 @@ var stories_2 = [
     "keywords" : ["long distance communications", "no network "],
 
     "access"   : "http://adventure.howstuffworks.com/survival/wilderness/how-to-send-smoke-signal1.htm",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 13,
@@ -266,7 +279,8 @@ var stories_2 = [
     "keywords" : ["no address"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 14,
@@ -285,7 +299,8 @@ var stories_2 = [
     "keywords" : ["humor"],
 
     "access"   : "https://mysterypotato.com/collections/all",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 15,
@@ -304,7 +319,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "http://www.pigeonairpatrol.com/",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 16,
@@ -324,7 +340,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 17,
@@ -344,7 +361,8 @@ var stories_2 = [
     "keywords" : ["man to machine communication"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 18,
@@ -364,7 +382,8 @@ var stories_2 = [
     "keywords" : ["silent speech"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 19,
@@ -383,7 +402,8 @@ var stories_2 = [
     "keywords" : ["machine language", "artificial intelligence", "bots"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 20,
@@ -403,7 +423,8 @@ var stories_2 = [
     "keywords" : ["brain to brain communication", "man to machine communication", "telepathy"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 21,
@@ -422,7 +443,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 22,
@@ -441,7 +463,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 23,
@@ -460,7 +483,8 @@ var stories_2 = [
     "keywords" : ["secret language", "womens communication", "gender specific"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 24,
@@ -479,7 +503,8 @@ var stories_2 = [
     "keywords" : ["humor"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 25,
@@ -499,7 +524,8 @@ var stories_2 = [
     "keywords" : ["symbols", "politics parties"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 26,
@@ -518,7 +544,8 @@ var stories_2 = [
     "keywords" : ["riots", "encrypted information network"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   { // miss
     "id"       : 27,
@@ -538,7 +565,8 @@ var stories_2 = [
     "keywords" : ["visual communication"],
 
     "access"   : "https://www.kwikpoint.com/",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 28,
@@ -557,7 +585,8 @@ var stories_2 = [
     "keywords" : ["campaign"],
 
     "access"   : "call at +46 771 793 336",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 29,
@@ -577,7 +606,8 @@ var stories_2 = [
     "keywords" : [],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   { // miss
     "id"       : 30,
@@ -596,7 +626,8 @@ var stories_2 = [
     "keywords" : ["campaign", "trolling the trolls"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   {
     "id"       : 31,
@@ -615,7 +646,8 @@ var stories_2 = [
     "keywords" : ["survival"],
 
     "access"   : "",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   },
   { // miss
     "id"       : 32,
@@ -634,7 +666,8 @@ var stories_2 = [
     "keywords" : ["trolling the trolls"],
 
     "access"   : "put “ ((( ))) “ around your name on Twitter",
-    "image"    : ""
+    "image"    : "",
+    "content"  : ""
   }
   // ,
   // {
@@ -654,7 +687,8 @@ var stories_2 = [
     // "keywords" : "",
 
   //   "access"   : "",
-  //   "image"    : ""
+  //   "image"    : "",
+  //   "content"  : ""
   // }
 ];
 
