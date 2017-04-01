@@ -1,4 +1,4 @@
 # Tools of Communication
 
-Temporary test environement :
-`http://79.137.74.178/TOC/`
+Project page :
+[https://thomas-lhuillier.github.io/toc/](https://thomas-lhuillier.github.io/toc/)
