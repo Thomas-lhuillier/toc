@@ -199,7 +199,6 @@ function display_stories() {
 var selected_stories;
 function update_stories() {
   selected_stories = [];
-  // console.log(choices_pool);
   for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
     if ( choices_pool[i][2] == choice2.value ) {  // if choice value = choice1.value
       var story = stories_2[choice1.idStory];
@@ -210,17 +209,16 @@ function update_stories() {
         }
       }
       if (isValid) {
-        console.log('isValid');
         selected_stories.push(choices_pool[i][0]);
       }
     }
   }
   // disable / enable 2nd choice
-  // if ( selected_stories.length == 1 ) {
-  //   $('#choice_2').addClass('disabled');
-  // } else {
-  //   $('#choice_2').removeClass('disabled');
-  // }
+  if ( stories_pool.length == 1 ) {
+    $('#choice_2').addClass('disabled');
+  } else {
+    $('#choice_2').removeClass('disabled');
+  }
 
   // clean previous
   $('.clone').remove();
