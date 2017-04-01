@@ -9,6 +9,7 @@ var parameters = [
   "message",
   "medium",
   "recipient",
+  "constraint",
 ];
 
 var choices_pool = [];
@@ -55,6 +56,37 @@ function init() {
     randomize_1st();
     randomize_2nd();
     update_stories();
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode == 37) { // left arrow = click on 1st choice
+      $('#choice_1').trigger('click');
+    }
+    if (e.keyCode == 39) { //right arrow = click on 2nd choice
+      $('#choice_2').trigger('click');
+    }
+  });
+
+  // Hey curious being
+  // What if you typed konami code instead ?
+  $(window).one('devtoolschange', function(e) {
+    if (e.detail.open) {
+      setTimeout(function() {
+        console.log('Hmmm, you there ?');
+      }, 500);
+      setTimeout(function() {
+        console.log('I whish we could talk through this...');
+      }, 3000);
+      setTimeout(function() {
+        console.log('What if you could right me back ?');
+      }, 6000);
+      setTimeout(function() {
+        console.log('Can you read me ?');
+      }, 20000);
+      setTimeout(function() {
+        console.log('I feel lonely :‘(');
+      }, 40000);
+    }
   });
 }
 
@@ -136,9 +168,30 @@ function makeChoicesPool(story, array) {
 }
 
 function display_stories() {
-  for (var i = 0; i < stories_2.length; i++) { // Loop through story list
-    var story = stories_2[i];
-    $('#js-stories').append('<li class="story" data-id="'+story.id+'"><span class="story__title">'+story.title+'</span></li>');
+  for (var u = 0; u < stories_2.length; u++) { // Loop through story list
+    var story = stories_2[u];
+    var output = '';
+    output += '<li class="story" data-id="'+story.id+'">';
+    output +=   '<span class="story__title">';
+    output +=     story.title;
+    output +=   '</span>';
+    output +=   '<a class="story__url" href="'+story.url+'" title="'+story.source+'">';
+    output +=     '<span>from </span>';
+    output +=     story.source;
+    output +=   '</a>';
+    output +=   '<span class="story__keywords">';
+    var keywords = story.keywords;
+    if (!isEmpty(keywords)) {
+      for (var i=0; i<keywords.length; i++) {
+        var keyword = story.keywords[i];
+      output +=     '<span>';
+      output +=       keyword;
+      output +=     '</span>';
+      }
+    }
+    output +=   '</span>';
+    output += '</li>';
+    $('#js-stories').append(output);
   }
 }
 
@@ -146,6 +199,7 @@ function display_stories() {
 var selected_stories;
 function update_stories() {
   selected_stories = [];
+  // console.log(choices_pool);
   for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
     if ( choices_pool[i][2] == choice2.value ) {  // if choice value = choice1.value
       var story = stories_2[choice1.idStory];
@@ -156,6 +210,7 @@ function update_stories() {
         }
       }
       if (isValid) {
+        console.log('isValid');
         selected_stories.push(choices_pool[i][0]);
       }
     }
@@ -218,3 +273,9 @@ function isEmpty(data) {
 function isString(data) {
   return (typeof data === 'string' || data instanceof String);
 }
+
+// Script to detect devTool state
+// https://github.com/sindresorhus/devtools-detect
+(function(){'use strict';var devtools={open:false,orientation:null};var threshold=160;var emitEvent=function(state,orientation){window.dispatchEvent(new CustomEvent('devtoolschange',{detail:{open:state,orientation:orientation}}));};setInterval(function(){var widthThreshold=window.outerWidth- window.innerWidth>threshold;var heightThreshold=window.outerHeight- window.innerHeight>threshold;var orientation=widthThreshold?'vertical':'horizontal';if(!(heightThreshold&&widthThreshold)&&((window.Firebug&&window.Firebug.chrome&&window.Firebug.chrome.isInitialized)||widthThreshold||heightThreshold)){if(!devtools.open||devtools.orientation!==orientation){emitEvent(true,orientation);}
+devtools.open=true;devtools.orientation=orientation;}else{if(devtools.open){emitEvent(false,null);}
+devtools.open=false;devtools.orientation=null;}},500);if(typeof module!=='undefined'&&module.exports){module.exports=devtools;}else{window.devtools=devtools;}})();

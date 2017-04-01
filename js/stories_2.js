@@ -1,6 +1,5 @@
 var stories_2 = [
   {
-    // 1
     "id"       : 0,
     "title"    : "How cute dogs became a symbol of protest",
     "url"      : "http://www.bbc.com/news/magazine-38936570",
@@ -20,7 +19,6 @@ var stories_2 = [
     "image"    : ""
   },
   {
-    // 2
     "id"       : 1,
     "title"    : "Romanian protesters use mobile phones to protest",
     "url"      : "http://www.bbc.com/news/world-europe-38952193",
@@ -40,7 +38,6 @@ var stories_2 = [
     "image"    : ""
   },
   {
-    //3
     "id"       : 2,
     "title"    : "Eliza",
     "url"      : "https://en.wikipedia.org/wiki/ELIZA",
@@ -74,7 +71,7 @@ var stories_2 = [
     "message"  : "about personal problems",
     "medium"   : ["using a message on a mango", "using a message on a fruit"],
     "recipient": "with the President",
-    "keywords" : "politics",
+    "keywords" : ["politics"],
 
     "access"   : "",
     "image"    : ""
@@ -132,7 +129,7 @@ var stories_2 = [
     "message"  : "about social media silence",
     "medium"   : ["using cats", "using social media", "using hashtags"],
     "recipient": "to the population",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "https://twitter.com/hashtag/brusselslockdown?src=hash",
     "image"    : ""
@@ -151,7 +148,7 @@ var stories_2 = [
     "message"  : "about disagreement",
     "medium"   : "using umbrellas",
     "recipient": "with the government",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "",
     "image"    : ""
@@ -304,7 +301,7 @@ var stories_2 = [
     "message"  : "about air-pollution",
     "medium"   : ["using tweeting pigeons", "using pigeons", "using Twitter", "using an application "],
     "recipient": ["with Twitter users", "with the application users"],
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "http://www.pigeonairpatrol.com/",
     "image"    : ""
@@ -324,7 +321,7 @@ var stories_2 = [
     "medium"   : ["using lip reading software", "using artificial intelligence"],
     "recipient": ["with someone hearing impaired", "with a mute person"],
     "constraint": "without speaking",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "",
     "image"    : ""
@@ -344,7 +341,7 @@ var stories_2 = [
     "medium"   : ["using brainwaves", "using thoughts"],
     "recipient": ["with machines", "with computers"],
     "constraint": "without speaking",
-    "keywords" : "man to machine communication",
+    "keywords" : ["man to machine communication"],
 
     "access"   : "",
     "image"    : ""
@@ -364,7 +361,7 @@ var stories_2 = [
     "medium"   : "using ear and tongue sensors",
     "recipient": ["with someone hearing impaired", "with a mute person"],
     "constraint": "without speaking",
-    "keywords" : "silent speech",
+    "keywords" : ["silent speech"],
 
     "access"   : "",
     "image"    : ""
@@ -422,7 +419,7 @@ var stories_2 = [
     "message"  : ["about a life threatening situation", "using a call for help"],
     "medium"   : "using an online pizza order",
     "recipient": "",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "",
     "image"    : ""
@@ -441,7 +438,7 @@ var stories_2 = [
     "message"  : "about confidential informations",
     "medium"   : "using a tv show",
     "recipient": "with someone in prison",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "",
     "image"    : ""
@@ -504,26 +501,26 @@ var stories_2 = [
     "access"   : "",
     "image"    : ""
   },
-  // {
-  //   "id"       : 26,
-  //   "title"    : "Why BlackBerry Messenger was rioters' communication method of choice",
-  //   "url"      : "https://www.theguardian.com/uk/2011/dec/07/bbm-rioters-communication-method-choice",
-  //   "source"   : "The Guardian",
-  //   "media"    : "article",
-  //   "author"   : "James Ball and Symeon Brown",
-  //   "date"     : "07.12.2011",
-    
-  //   "space"    : "",
-  //   "time"     : "",
-  //   "message"  : "using Blackberry Messenger Network",
-  //   "medium"   : "",
-  //   "recipient": "",
-  //   "keywords" : ["riots", "encrypted information network"],
-
-  //   "access"   : "",
-  //   "image"    : ""
-  // },
   {
+    "id"       : 26,
+    "title"    : "Why BlackBerry Messenger was rioters' communication method of choice",
+    "url"      : "https://www.theguardian.com/uk/2011/dec/07/bbm-rioters-communication-method-choice",
+    "source"   : "The Guardian",
+    "media"    : "article",
+    "author"   : "James Ball and Symeon Brown",
+    "date"     : "07.12.2011",
+    
+    "space"    : "",
+    "time"     : "",
+    "message"  : "",
+    "medium"   : "using Blackberry Messenger Network",
+    "recipient": "with people using the same network",
+    "keywords" : ["riots", "encrypted information network"],
+
+    "access"   : "",
+    "image"    : ""
+  },
+  { // miss
     "id"       : 27,
     "title"    : "Point me where that hurts",
     "url"      : "https://worksthatwork.com/1/kwikpoint/share/213c3ea5f5e209eb2731ca174ec90572",
@@ -538,7 +535,7 @@ var stories_2 = [
     "medium"   : ["using graphic design", "using illustrations"],
     "recipient": "with locals",
     "constraint": ["beyond language and culture barriers", "on the battlefield"],
-    "keywords" : "visual communication",
+    "keywords" : ["visual communication"],
 
     "access"   : "https://www.kwikpoint.com/",
     "image"    : ""
@@ -557,7 +554,7 @@ var stories_2 = [
     "message"  : "about anything",
     "medium"   : "using telephone",
     "recipient": "with a random Swede",
-    "keywords" : "campaign",
+    "keywords" : ["campaign"],
 
     "access"   : "call at +46 771 793 336",
     "image"    : ""
@@ -577,12 +574,12 @@ var stories_2 = [
     "medium"   : "using a record",
     "constraint": ["beyond language barriers", "beyond cultural barriers", "beyond language and cultural barriers"],
     "recipient": "with extraterrestrial life forms",
-    "keywords" : "",
+    "keywords" : [],
 
     "access"   : "",
     "image"    : ""
   },
-  {
+  { // miss
     "id"       : 30,
     "title"    : "Brazilian activists shame web trolls on billboards",
     "url"      : "http://www.pcmag.com/article2/0,2817,2495962,00.asp",
@@ -615,12 +612,12 @@ var stories_2 = [
     "message"  : ["about a life threatening situation", "about a call for help"],
     "medium"   : "using a message in a bottle",
     "recipient": "",
-    "keywords" : "survival",
+    "keywords" : ["survival"],
 
     "access"   : "",
     "image"    : ""
   },
-  {
+  { // miss
     "id"       : 32,
     "title"    : "People are putting ((( echoes ))) around their names on Twitter – here’s why",
     "url"      : "http://metro.co.uk/2016/06/05/people-are-putting-echoes-around-their-names-on-twitter-heres-why-5925002/",
@@ -634,7 +631,7 @@ var stories_2 = [
     "message"  : ["about online racism", "about online antisemitism"],
     "medium"   : ["using brackets", "using Twitter"],
     "recipient": ["with  online Trolls", "with the wide public"],
-    "keywords" : "trolling the trolls",
+    "keywords" : ["trolling the trolls"],
 
     "access"   : "put “ ((( ))) “ around your name on Twitter",
     "image"    : ""
@@ -654,7 +651,7 @@ var stories_2 = [
   //   "message"  : "",
   //   "medium"   : "",
   //   "recipient": "",
-  //   "keywords" : "",
+    // "keywords" : "",
 
   //   "access"   : "",
   //   "image"    : ""

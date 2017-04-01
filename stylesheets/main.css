@@ -1,4 +1,3 @@
-/* line 5, ../sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,46 +19,38 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 26, ../sass/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 30, ../sass/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 33, ../sass/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 36, ../sass/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 39, ../sass/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 44, ../sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 23, ../sass/main.scss */
 html {
   font-size: 1em;
 }
 
-/* line 27, ../sass/main.scss */
 body {
   font-size: 21px;
   line-height: 1.45;
@@ -68,12 +59,10 @@ body {
   background-color: #fff;
 }
 
-/* line 36, ../sass/main.scss */
 p {
   margin-bottom: 1.3em;
 }
 
-/* line 40, ../sass/main.scss */
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
@@ -81,33 +70,27 @@ h1, h2, h3, h4 {
   font-family: "Gentium Book Basic", serif;
 }
 
-/* line 47, ../sass/main.scss */
 h1 {
   margin-top: 0;
   font-size: 3.157em;
 }
 
-/* line 52, ../sass/main.scss */
 h2 {
   font-size: 2.369em;
 }
 
-/* line 56, ../sass/main.scss */
 h3 {
   font-size: 1.777em;
 }
 
-/* line 60, ../sass/main.scss */
 h4 {
   font-size: 1.333em;
 }
 
-/* line 64, ../sass/main.scss */
 small, .font_small {
   font-size: 0.75em;
 }
 
-/* line 68, ../sass/main.scss */
 .button-container {
   position: relative;
   display: inline-block;
@@ -125,7 +108,6 @@ small, .font_small {
   border-style: solid;
 }
 
-/* line 87, ../sass/main.scss */
 .btn-choice {
   padding-left: 10px;
   color: #999999;
@@ -136,32 +118,25 @@ small, .font_small {
   -webkit-transition: color, 0.4s, linear;
   transition: color, 0.4s, linear;
 }
-/* line 95, ../sass/main.scss */
 .btn-choice:before {
   content: '[';
 }
-/* line 99, ../sass/main.scss */
 .btn-choice:after {
   content: ']';
 }
-/* line 103, ../sass/main.scss */
 .btn-choice:before, .btn-choice:after, .btn-choice:hover {
   color: blue;
 }
-/* line 109, ../sass/main.scss */
 .btn-choice.disabled {
   cursor: default;
 }
-/* line 111, ../sass/main.scss */
 .btn-choice.disabled:before, .btn-choice.disabled:after {
   content: '';
 }
-/* line 115, ../sass/main.scss */
 .btn-choice.disabled:hover {
   color: #999999;
 }
 
-/* line 121, ../sass/main.scss */
 .btn-shuffle {
   display: inline-block;
   position: absolute;
@@ -177,35 +152,44 @@ small, .font_small {
   cursor: pointer;
 }
 
-/* line 139, ../sass/main.scss */
 .stories-container {
   padding: 21px;
+  max-width: 660px;
+  margin: auto;
 }
 
-/* line 143, ../sass/main.scss */
 .story {
   position: relative;
   margin: auto;
+  margin-bottom: 20px;
   padding-left: 25px;
-  font-size: 23px;
   font-family: "Gentium Book Basic", serif;
   font-weight: 700;
   color: #999999;
   cursor: pointer;
 }
-/* line 153, ../sass/main.scss */
 .story.clone {
   color: #000 !important;
 }
-/* line 155, ../sass/main.scss */
 .story.clone .story__title:before {
   background-color: blue;
 }
-/* line 160, ../sass/main.scss */
 .story.hidden {
   display: none;
 }
-/* line 165, ../sass/main.scss */
+.story:hover .story__title,
+.story:hover .story__url,
+.story:hover .story__keywords {
+  color: blue;
+}
+.story:hover .story__title:before,
+.story:hover .story__url:after {
+  background-color: blue;
+}
+.story .story__title {
+  display: block;
+  font-size: 23px;
+}
 .story .story__title:before {
   position: absolute;
   left: 0;
@@ -221,15 +205,43 @@ small, .font_small {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 178, ../sass/main.scss */
-.story .story__title:hover {
-  color: #000;
+.story .story__url {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
-/* line 180, ../sass/main.scss */
-.story .story__title:hover:before {
-  background-color: blue;
+.story .story__url:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #999999;
 }
-/* line 186, ../sass/main.scss */
-.story .story__author {
-  float: right;
+.story .story__url > span {
+  font-style: normal;
 }
+.story .story__keywords {
+  display: block;
+  margin-top: -8px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+}
+.story .story__keywords > span:before {
+  content: '#';
+  display: inline-block;
+}
+.story .story__keywords > span + span {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */

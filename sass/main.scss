@@ -12,8 +12,8 @@ $color-background    : #fff;
 $color-text          : #000;
 $color-hover         : #333;
 
-$color-blue: rgb(0, 0, 255);
-$color-gray: rgb(153, 153, 153);
+$color-blue          : rgb(0, 0, 255);
+$color-gray          : rgb(153, 153, 153);
 
 // Reset
 @import "_reset.scss";
@@ -68,15 +68,15 @@ small, .font_small {
 .button-container {
 	position: relative;
 	display: inline-block;
-	margin-top: 2*$font-size-base;
+	margin-top: 2 * $font-size-base;
 	margin-right: $font-size-base;
-	margin-bottom: 2*$font-size-base;
+	margin-bottom: 2 * $font-size-base;
 	margin-left: $font-size-base;
 	padding-bottom: $font-size-base;
 	box-sizing: border-box;
 
 	font-size: $font-size-base;
-	line-height: $font-size-base  * 1.5;
+	line-height: $font-size-base * 1.5;
 	font-family: $font-family;
 
 	border-bottom-width: 3px;
@@ -138,13 +138,15 @@ small, .font_small {
 
 .stories-container {
 	padding: $font-size-base;
+    max-width: 660px;
+    margin: auto;
 }
 
 .story {
 	position: relative;
 	margin: auto;
+	margin-bottom: 20px;
 	padding-left: 25px;
-	font-size: 23px;
 	font-family: $font-family-display;
 	font-weight: $bold;
 	color: $color-gray;
@@ -161,7 +163,22 @@ small, .font_small {
 		display: none;
 	}
 
+	&:hover {
+		.story__title,
+		.story__url,
+		.story__keywords {
+			color: $color-blue;
+		}
+
+		.story__title:before,
+		.story__url:after {
+			background-color: $color-blue;
+		}
+	}
+
 	.story__title {
+		display: block;
+		font-size: 23px;
 		&:before {
 			position: absolute;
 			left: 0;
@@ -175,16 +192,48 @@ small, .font_small {
 			background-color: $color-gray;
 			@include border-radius(100%);
 		}
-		&:hover {
-			color: #000;
-			&:before {
-				background-color: $color-blue;
-			}
+	}
+	.story__url {
+		display: inline-block;
+		position: relative;
+
+		font-size: 18px;
+		line-height: 1.2em;
+		font-weight: $regular;
+		font-style: italic;
+		text-decoration: none;
+		color: inherit;
+
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background-color: $color-gray;
+		} 
+		& > span {
+			font-style: normal;
 		}
 	}
-	.story__date {}
-	.story__author {
-		float: right;
-	}
-	.story__content {}
+	.story__keywords {
+		display: block;
+		margin-top: -8px;
+		font-size: 18px;
+		font-weight: $regular;
+		text-align: right;
+		& > span {
+			&:before {
+				content: '#';
+				display: inline-block;
+			}
+		}
+		& > span + span {
+			margin-left: 5px;
+		}
+	} 
 }
