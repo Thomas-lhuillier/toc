@@ -17,7 +17,7 @@ var stories_2 = [
 
     "access"   : "",
     "image"    : "",
-    "content"  : ""
+    "content"  : "Romania's tale of puppy politics."
   },
   {
     "id"       : 1,
@@ -60,7 +60,6 @@ var stories_2 = [
     "content"  : "<p>ELIZA is an early natural language processing computer program created from 1964 to 1966 at the MIT Artificial Intelligence Laboratory by Joseph Weizenbaum. Created to demonstrate the superficiality of communication between man and machine, Eliza simulated conversation by using a 'pattern matching' and substitution methodology that gave users an illusion of understanding on the part of the program, but had no built in framework for contextualizing events. Directives on how to interact were provided by 'scripts', written originally in MAD-Slip, which allowed ELIZA to process user inputs and engage in discourse following the rules and directions of the script. The most famous script, DOCTOR, simulated a Rogerian psychotherapist and used rules, dictated in the script, to respond with non-directional questions to user inputs. As such, ELIZA was one of the first chatterbots, but was also regarded as one of the first programs capable of passing the Turing Test.</p><p>ELIZA's creator, Weizenbaum regarded the program as a method to show the superficiality of communication between man and machine, but was surprised by the number of individuals who attributed human-like feelings to the computer program, including Weizenbaum’s secretary. Many academics believed that the program would be able to positively influence the lives of many people, particularly those suffering from psychological issues and that it could aid doctors working on such patients’ treatment. While ELIZA was capable of engaging in discourse, ELIZA could not converse with true understanding. However, many early users were convinced of ELIZA’s intelligence and understanding, despite Weizenbaum’s insistence to the contrary.</p>"
   },
   {
-    // 4
     "id"       : 3,
     "title"    : "Woman who hit Venezuelan president with mango rewarded with house",
     "url"      : "https://www.theguardian.com/world/2015/apr/25/venezuela-woman-president-mango-house",
@@ -81,7 +80,6 @@ var stories_2 = [
     "content"  : ""
   },
   {
-    // 5
     "id"       : 4,
     "title"    : "These Emoji make it easier for kids to ‘talk’ about abuse",
     "url"      : "https://www.wired.com/2015/06/abused-emoji/",

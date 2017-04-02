@@ -86,6 +86,17 @@ function init() {
     }
   });
 
+  // Open about page on click on the interrogation mark.
+  $(document).on('click', '.js-open-about', function() {
+    $('#js-about-overlay').fadeIn();
+    $('html').addClass('no-scroll');
+  });
+
+  $(document).on('click', '.js-close-about', function() {
+    $('#js-about-overlay').fadeOut();
+    $('html').removeClass('no-scroll');
+  });
+
   // Hey curious being
   // What if you typed konami code instead ?
   $(window).one('devtoolschange', function(e) {
@@ -274,10 +285,10 @@ function display_stories() {
     output +=     story.title;
     output +=   '</span>';
     output +=   '<div class="clearfix">';
-    output +=     '<a class="story__url" href="'+story.url+'" title="'+story.source+'">';
+    output +=     '<div class="story__url" href="'+story.url+'" title="'+story.source+'">';
     output +=       '<span>from </span>';
     output +=       story.source;
-    output +=     '</a>';
+    output +=     '</div>';
     output +=     '<span class="story__keywords">';
     var keywords = story.keywords;
     if (!isEmpty(keywords)) {
@@ -307,7 +318,7 @@ function display_story(idStory) {
   output += "</h2>";
   // source
   output += '<div class="clearfix">';
-  output += '<a class="story__url" href="'+stories_2[id].url+'">';
+  output += '<a class="story__url" href="'+stories_2[id].url+'" target="blank">';
   output += '<span>from </span>';
   output += stories_2[id].source;
   output += '</a>';
@@ -328,6 +339,18 @@ function display_story(idStory) {
   output += '<div class="story__content">';
   output += stories_2[id].content;
   output += '</div>';
+
+  if (stories_2[id].media == "article") {
+    output += '<a href="'+stories_2[id].url+'" target="blank" class="btn-blue">Continue reading the article</a>';
+  }
+
+  if (stories_2[id].media == "video") {
+    output += '<a href="'+stories_2[id].url+'" target="blank" class="btn-blue">Watch the story</a>';
+  }
+
+  if (stories_2[id].media == "definition") {
+    output += '<a href="'+stories_2[id].url+'" target="blank" class="btn-blue">Read the definition</a>';
+  }
 
   $('#js-story-overlay .content').empty().append(output).parent().addClass('expanded').fadeIn();
   $('html').addClass('no-scroll');

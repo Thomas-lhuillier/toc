@@ -107,6 +107,8 @@ body {
   font-family: "Poppins", serif;
   color: #000;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -208,14 +210,11 @@ html.no-scroll {
 .btn-choice:before, .btn-choice:after, .btn-choice:hover {
   color: blue;
 }
-.btn-choice.disabled {
-  cursor: default;
-}
 .btn-choice.disabled:before, .btn-choice.disabled:after {
   content: '';
 }
 .btn-choice.disabled:hover {
-  color: #999999;
+  color: #000;
 }
 
 .btn-shuffle {
@@ -329,6 +328,7 @@ html.no-scroll {
 
 .story__content {
   margin-top: 1.2em;
+  margin-bottom: 1.2em;
   font-size: 26px;
   font-family: "Gentium Book Basic", serif;
 }
@@ -372,6 +372,14 @@ html.no-scroll {
   background-color: blue;
 }
 
+.btn-blue {
+  display: inline-block;
+  padding: 4px 12px;
+  color: #fff;
+  background: blue;
+  text-decoration: none;
+}
+
 .btn-container {
   position: fixed;
   top: 0;
@@ -384,6 +392,94 @@ html.no-scroll {
   height: 40px;
   padding: 20px;
   font-size: 40px;
+  color: blue;
+}
+
+.about {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 60px;
+  max-height: 100%;
+  color: #fff;
+  background-color: blue;
+  overflow-y: auto;
+}
+.about .btn-action {
+  color: #fff;
+}
+.about .wrapper {
+  padding: 0 40px;
+}
+.about .content {
+  max-width: 880px;
+  margin: auto;
+}
+.about .title {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+.about .text {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-family: "Gentium Book Basic", serif;
+  font-weight: 400;
+}
+.about .text:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 4px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.about .text b {
+  font-weight: 700;
+}
+.about .thanks {
+  margin-top: 110px;
+  font-size: 16px;
+}
+.about .thanks a {
+  font-size: 20px;
+  font-family: "Gentium Book Basic", serif;
+  text-decoration: none;
+  color: #fff;
+}
+.about .thanks a:hover {
+  color: #000;
+}
+.about .thanks hr {
+  max-width: 145px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.fluid-col-wrapper {
+  float: left;
+  width: 100%;
+}
+.fluid-col-wrapper .content {
+  padding-right: 200px;
+}
+
+.fixed-col-wrapper {
+  float: right;
+  width: 200px;
+  margin-left: -100%;
 }
 
 /*# sourceMappingURL=main.css.map */

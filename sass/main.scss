@@ -32,6 +32,9 @@ body {
 
 	color: $color-text;
 	background-color: $color-background;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -144,13 +147,12 @@ html.no-scroll {
 	}
 
 	&.disabled {
-		cursor: default;
 		&:before,
 		&:after {
 			content: '';
 		}
 		&:hover {
-			color: $color-gray;
+			color: #000;
 		}
 	}
 }
@@ -279,6 +281,7 @@ html.no-scroll {
 
 .story__content {
     margin-top: 1.2em;
+    margin-bottom: 1.2em;
 	font-size: 26px;
 	font-family: $font-family-display;
 } 
@@ -321,6 +324,14 @@ html.no-scroll {
     }
 }
 
+.btn-blue {
+	display: inline-block;
+	padding: 4px 12px;
+	color: #fff;
+	background: $color-blue;
+	text-decoration: none;
+}
+
 .btn-container {
 	position: fixed;
 	top: 0;
@@ -333,4 +344,93 @@ html.no-scroll {
     height: 40px;
     padding: 20px;
     font-size: 40px;
+	color: $color-blue;
 }
+
+.about {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding-bottom: 60px;
+	max-height: 100%;
+	color: #fff;
+	background-color: $color-blue;
+	overflow-y: auto;
+	.btn-action {
+		color: #fff;
+	}
+	.wrapper {
+		padding: 0 40px;
+	}
+	.content {
+	    max-width: 880px;
+    	margin: auto;
+	}
+	.title {
+		font-family: $font-family;
+		font-weight: $bold;
+		text-transform: lowercase;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		margin-left: 60px;
+	}
+	.text {
+		position: relative;
+		padding-left: 30px;
+		padding-right: 20px; 
+		font-family: $font-family-display;
+		font-weight: $regular;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 4px;
+			background-color: #fff;
+			top: 0;
+			bottom: 0;
+			left: 0;
+		}
+		b {
+			font-weight: $bold;
+		}
+	}
+	.thanks {
+		margin-top: 110px;
+		font-size: 16px;
+		a {
+			font-size: 20px;
+			font-family: $font-family-display;
+			text-decoration: none;
+			color: #fff;
+			&:hover {
+				color: #000;
+			}
+		}
+		hr {
+			max-width: 145px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			margin-left: 0;
+		    border-width: 2px;
+    		border-style: solid;
+		}
+	}
+}
+
+.fluid-col-wrapper {
+	float: left;
+	width: 100%;
+	.content {
+		padding-right: 200px;
+	}
+}
+
+.fixed-col-wrapper {
+	float: right;
+	width: 200px;
+	margin-left: -100%;
+}
+

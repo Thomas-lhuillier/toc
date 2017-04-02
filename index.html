@@ -18,9 +18,10 @@
   <body>
     <header>
       <img src="img/logo_300.png" alt="Tools of communication" class="logo">
+      <div class="js-open-about icon__interrogation btn-action"></div>
     </header>
     
-    <div class="main-wrapper">
+    <section class="main-wrapper">
       <div class="button-wrapper">
         <div class="button-container">
           <span>How to communicate</span>
@@ -33,17 +34,57 @@
       <ul id="js-stories" class="stories-container">
         
       </ul>
-    </div>
+    </section>
 
-    <div id="js-story-overlay" class="story__overlay">
+    <section id="js-story-overlay" class="story__overlay">
       <div class="btn-container">
         <div class="js-close-story btn-action icon__cross"></div>
         <div class="js-next-story btn-action icon__arrow--right"></div>
         <div class="js-prev-story btn-action icon__arrow--left"></div>
       </div>
       <div class="content"></div>
-    </div>
+    </section>
 
-    <div id="follower"><div id="circle1"></div></div>
+    <section id="js-about-overlay" class="about">
+      <header class="clearfix">
+        <img src="img/logo_300_reversed.png" alt="Tools of communication" class="logo">
+        <div class="js-close-about btn-action icon__cross"></div>
+      </header>
+      <div class="wrapper">
+
+        <div class="fluid-col-wrapper">
+          <div class="content">
+            <div class="title"> 
+              About the project
+            </div>
+            <div class="text">
+              <b>Communication</b>, Wikipedia definition<br>
+              <br>
+              purposeful activity of exchanging information and meaning across space and time using various technical or natural means, whichever is available or preferred.<br>
+              <br>
+              Communication requires a sender, a message, a medium and a recipient.<br>
+              Tools of Communication is an evolving database of communication stories; the content is accessible through a multiple choices sentence. The parameters of communication -space, time, message, medium and recipient, as well as constraints- can be changed to explore the pool of communication stories, through their specificities.  This process, through deconstructing the different phases of communication, highlights the underlying choices we make while establishing a communication, and the challenges faced when the usual means of communication are not accessible.<br>
+              <br>
+              Tools of Communication
+            </div>
+          </div>
+        </div>
+
+        <div class="fixed-col-wrapper">
+          <aside class="thanks">
+            a project by <a href="">Coralie Gourguechon</a> x <a href="">Fabrica</a><br>
+            part of the 2nd issue of <a href="">Fictional Journal</a>, Propaganda.<br>
+            <hr>
+            web development: <a href="">Thomas L'huillier</a><br>
+            graphic design: <a href="">Laura Messaglio</a><br>
+            <hr>
+            thanks to:<br>
+            <a href="">Sam Baron</a><br>
+            <a href="">Angelo Semeraro</a><br>
+          </aside>
+        </div>
+
+      </div>
+    </section>
   </body>
 </html>
