@@ -348,6 +348,7 @@ html.no-scroll {
   max-width: 990px;
   margin: auto;
   padding: 0 40px;
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 .story__overlay .content h2 {
@@ -407,12 +408,17 @@ html.no-scroll {
   color: #fff;
   background-color: blue;
   overflow-y: auto;
+  cursor: url("../img/cursor_black.ico"), default !important;
 }
 .about .btn-action {
   color: #fff;
 }
 .about .wrapper {
   padding: 0 40px;
+}
+.about .container {
+  max-width: 880px;
+  margin: auto;
 }
 .about .content {
   max-width: 880px;

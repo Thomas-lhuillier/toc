@@ -301,6 +301,7 @@ html.no-scroll {
 	    max-width: 990px;
     	margin: auto;
     	padding: 0 40px;
+    	padding-bottom: 60px;
     	box-sizing: border-box;
     	h2 {
     		margin-bottom: 0;
@@ -359,11 +360,16 @@ html.no-scroll {
 	color: #fff;
 	background-color: $color-blue;
 	overflow-y: auto;
+	cursor: url('../img/cursor_black.ico'), default !important;
 	.btn-action {
 		color: #fff;
 	}
 	.wrapper {
 		padding: 0 40px;
+	}
+	.container {
+		max-width: 880px;
+    	margin: auto;
 	}
 	.content {
 	    max-width: 880px;
