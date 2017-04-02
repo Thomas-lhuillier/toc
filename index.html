@@ -19,22 +19,28 @@
     <header>
       <img src="img/logo_300.png" alt="Tools of communication" class="logo">
     </header>
-
-    <div class="button-wrapper">
-      <div class="button-container">
-        <span>How to communicate</span>
-        <span id="choice_1" class="btn-choice"></span>
-        <span id="choice_2" class="btn-choice"></span>
-        <button id="shuffle" class="btn-shuffle">shuffle</button>
+    
+    <div class="main-wrapper">
+      <div class="button-wrapper">
+        <div class="button-container">
+          <span>How to communicate</span>
+          <span id="choice_1" class="btn-choice"></span>
+          <span id="choice_2" class="btn-choice"></span>
+          <button id="shuffle" class="btn-shuffle">shuffle</button>
+        </div>
       </div>
+
+      <ul id="js-stories" class="stories-container">
+        
+      </ul>
     </div>
 
-    <ul id="js-stories" class="stories-container">
-      
-    </ul>
-
     <div id="js-story-overlay" class="story__overlay">
-      <div class="js-close-story btn-close icon__cross"></div>
+      <div class="btn-container">
+        <div class="js-close-story btn-action icon__cross"></div>
+        <div class="js-next-story btn-action icon__arrow--right"></div>
+        <div class="js-prev-story btn-action icon__arrow--left"></div>
+      </div>
       <div class="content"></div>
     </div>
 

@@ -1,4 +1,5 @@
 var font_size_base = 24;
+var current_story_id;
 var parameters = [
   "space",
   "time",
@@ -59,28 +60,30 @@ function init() {
     }
   });
 
-  // Open story on click
+  // Open story on click on story title.
   $(document).on('click', '.story', function() {
-    console.log('story clicked');
     var id = $(this).data('id');
-    if (!isEmpty(stories_2[id].content)) {
-      console.log('display content');
-      // display story text
-      var output = "";
-      output += "<h2>";
-      output += stories_2[id].title;
-      output += "</h2>";
-      output += stories_2[id].content;
-      $('#js-story-overlay .content').empty().append(output).parent().addClass('expanded').fadeIn();
-      $('html').addClass('no-scroll');
-    } else if (!isEmpty(stories_2[id].url)) {
-      // Open link in new window
-    }
+    display_story(id);
   });
 
+  // Close story on click on cross button.
   $(document).on('click', '.js-close-story', function() {
     $('#js-story-overlay').fadeOut().removeClass('expanded');
     $('html').removeClass('no-scroll');
+  });
+
+  $(document).on('click', '.js-next-story', function() {
+    if (current_story_id < stories_2.length) {
+      current_story_id++;
+      display_story(current_story_id);
+    }
+  });
+
+  $(document).on('click', '.js-prev-story', function() {
+    if (current_story_id > 0) {
+      current_story_id--;
+      display_story(current_story_id);
+    }
   });
 
   // Hey curious being
@@ -207,67 +210,10 @@ function makeChoicesPool(story, array) {
   }
 }
 
-function display_stories() {
-  for (var u = 0; u < stories_2.length; u++) { // Loop through story list
-    var story = stories_2[u];
-    var output = '';
-    output += '<li class="story" data-id="'+story.id+'">';
-    output +=   '<span class="story__title">';
-    output +=     story.title;
-    output +=   '</span>';
-    output +=   '<a class="story__url" href="'+story.url+'" title="'+story.source+'">';
-    output +=     '<span>from </span>';
-    output +=     story.source;
-    output +=   '</a>';
-    output +=   '<span class="story__keywords">';
-    var keywords = story.keywords;
-    if (!isEmpty(keywords)) {
-      for (var i=0; i<keywords.length; i++) {
-        var keyword = story.keywords[i];
-      output +=     '<span>';
-      output +=       keyword;
-      output +=     '</span>';
-      }
-    }
-    output +=   '</span>';
-    output += '</li>';
-    $('#js-stories').append(output);
-  }
-}
-
 
 var selected_stories;
 function update_stories() {
   selected_stories = [];
-  // for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
-  //   if ( choices_pool[i][2] == choice1.value ) {  // if choice value = choice1.value
-  //     var story = stories_2[choices_pool[i][0]];
-  //     var isValid = false;
-  //     for (var key in story) { // if this story contains choice2.value
-  //       if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) ) {
-  //         // if is array
-  //         if (Array.isArray(story[key])) {
-  //           var array = story[key];
-  //           for (var y = 0; y < array.length; y++) {
-  //             if (array[y] == choice2.value) {
-  //               isValid = true;
-  //             }
-  //           }
-  //         } else {
-  //           var string = story[key];
-  //           if (string == choice2.value) {
-  //             isValid = true;
-  //           }
-  //         }
-  //       }
-  //     }
-  //     if (isValid) {
-  //       console.log('isValid, on push l‘ID :', choices_pool[i][0]);
-  //       selected_stories.push(choices_pool[i][0]);
-  //     }
-  //   }
-  // }
-
   for (var i = 0; i < stories_pool.length; i++) {
     var story = stories_2[stories_pool[i]];
     console.log(story);
@@ -291,7 +237,7 @@ function update_stories() {
       }
     }
     if (isValid) {
-      console.log('isValid, on push l‘ID :', stories_pool[i]);
+      console.log('isValid, we push id :', stories_pool[i]);
       selected_stories.push(stories_pool[i]);
     }
   }
@@ -317,6 +263,76 @@ function update_stories() {
     });
   }
 }
+
+
+function display_stories() {
+  for (var u = 0; u < stories_2.length; u++) { // Loop through story list
+    var story = stories_2[u];
+    var output = '';
+    output += '<li class="story" data-id="'+story.id+'">';
+    output +=   '<span class="story__title">';
+    output +=     story.title;
+    output +=   '</span>';
+    output +=   '<div class="clearfix">';
+    output +=     '<a class="story__url" href="'+story.url+'" title="'+story.source+'">';
+    output +=       '<span>from </span>';
+    output +=       story.source;
+    output +=     '</a>';
+    output +=     '<span class="story__keywords">';
+    var keywords = story.keywords;
+    if (!isEmpty(keywords)) {
+      for (var i=0; i<keywords.length; i++) {
+        var keyword = story.keywords[i];
+      output +=       '<span>';
+      output +=         keyword;
+      output +=       '</span>';
+      }
+    }
+    output +=     '</div>';
+    output +=   '</span>';
+    output += '</li>';
+    $('#js-stories').append(output);
+  }
+}
+
+function display_story(idStory) {
+  current_story_id = idStory;
+  var id = idStory;
+  // Display story content
+  var output = "";
+
+  // title
+  output += "<h2>";
+  output += stories_2[id].title;
+  output += "</h2>";
+  // source
+  output += '<div class="clearfix">';
+  output += '<a class="story__url" href="'+stories_2[id].url+'">';
+  output += '<span>from </span>';
+  output += stories_2[id].source;
+  output += '</a>';
+  // keywords
+  output += '<span class="story__keywords">';
+  var keywords = stories_2[id].keywords;
+  if (!isEmpty(keywords)) {
+    for (var i=0; i<keywords.length; i++) {
+      var keyword = stories_2[id].keywords[i];
+      output += '<span>';
+      output += keyword;
+      output += '</span>';
+    }
+  }
+  output += '</span>';
+  output += '</div>';
+  // content
+  output += '<div class="story__content">';
+  output += stories_2[id].content;
+  output += '</div>';
+
+  $('#js-story-overlay .content').empty().append(output).parent().addClass('expanded').fadeIn();
+  $('html').addClass('no-scroll');
+}
+
 
 
 

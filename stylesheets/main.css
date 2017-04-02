@@ -150,6 +150,20 @@ html.no-scroll {
   overflow: hidden;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.main-wrapper {
+  padding: 0 40px;
+}
+
 .button-wrapper {
   text-align: center;
 }
@@ -174,10 +188,10 @@ html.no-scroll {
   display: block;
   float: left;
   user-select: none;
+  padding-right: 10px;
 }
 
 .btn-choice {
-  padding-left: 10px;
   color: #000;
   user-select: none;
   -moz-transition: color, 0.4s, linear;
@@ -219,7 +233,6 @@ html.no-scroll {
 }
 
 .stories-container {
-  padding: 21px;
   max-width: 880px;
   margin: auto;
 }
@@ -251,12 +264,13 @@ html.no-scroll {
 .story:hover .story__url:after {
   background-color: blue;
 }
-.story .story__title {
+
+.story__title {
   display: block;
   font-size: 33px;
   line-height: 33px;
 }
-.story .story__title:before {
+.story__title:before {
   position: absolute;
   left: 0;
   top: calc(23px / 2);
@@ -271,8 +285,10 @@ html.no-scroll {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-.story .story__url {
+
+.story__url {
   display: inline-block;
+  float: left;
   position: relative;
   font-size: 18px;
   line-height: 1.2em;
@@ -281,7 +297,7 @@ html.no-scroll {
   text-decoration: none;
   color: inherit;
 }
-.story .story__url:after {
+.story__url:after {
   content: '';
   display: block;
   position: absolute;
@@ -291,22 +307,30 @@ html.no-scroll {
   height: 1px;
   background-color: #999999;
 }
-.story .story__url > span {
+.story__url > span {
   font-style: normal;
 }
-.story .story__keywords {
-  display: block;
-  margin-top: -8px;
+
+.story__keywords {
+  display: inline-block;
+  float: right;
   font-size: 18px;
+  line-height: 1.2em;
   font-weight: 400;
   text-align: right;
 }
-.story .story__keywords > span:before {
+.story__keywords > span:before {
   content: '#';
   display: inline-block;
 }
-.story .story__keywords > span + span {
+.story__keywords > span + span {
   margin-left: 5px;
+}
+
+.story__content {
+  margin-top: 1.2em;
+  font-size: 26px;
+  font-family: "Gentium Book Basic", serif;
 }
 
 .story__overlay {
@@ -316,21 +340,50 @@ html.no-scroll {
   right: 0;
   bottom: 0;
   left: 0;
+  color: blue;
   background-color: #fff;
   overflow-y: auto;
 }
 .story__overlay .content {
-  max-width: 660px;
+  max-width: 990px;
   margin: auto;
-  padding: 0 50px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.story__overlay .content h2 {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.story__overlay .content h2:before {
+  left: 0;
+  top: calc(23px / 2);
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: blue;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.story__overlay .content .story__url:after {
+  background-color: blue;
 }
 
-.btn-close {
+.btn-container {
+  position: fixed;
+  top: 0;
+  right: 40px;
+}
+
+.btn-action {
+  float: right;
   width: 40px;
   height: 40px;
   padding: 20px;
   font-size: 40px;
-  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */
