@@ -18,6 +18,7 @@ $color-gray          : rgb(153, 153, 153);
 // Reset
 @import "_reset.scss";
 @import "compass";
+@import "icon/style";
 
 // Font scaling
 html {
@@ -65,11 +66,133 @@ small, .font_small {
 	font-size: 0.75em;
 }
 
+
+// general
+body {
+	cursor: url('../img/cursor.ico'), default !important;
+}
+
+// #follower {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// }
+
+// #follower #circle1 {
+// 	position: absolute;
+// 	-webkit-animation: pulse 2s infinite; /* Chrome, Safari, Opera */
+// 	animation: pulse 2s infinite;
+// 	background: $color-blue;
+// 	border-radius: 50%;
+// 	height: 0em;
+// 	width: 0em;
+// 	margin-top: 0em;
+// 	margin-left: 0em;
+// }
+
+// @-moz-keyframes pulse {
+// 	0% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// 	50% {
+// 		opacity: 0.9;
+// 		height: 3em;
+// 		width: 3em;
+// 		margin-top: -1.5em;
+// 		margin-left: -1.5em;
+// 	}
+// 	100% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// }
+
+// @-webkit-keyframes pulse {
+// 	0% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// 	50% {
+// 		opacity: 0.9;
+// 		height: 3em;
+// 		width: 3em;
+// 		margin-top: -1.5em;
+// 		margin-left: -1.5em;
+// 	}
+// 	100% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// }
+
+// @-o-keyframes pulse {
+// 	0% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// 	50% {
+// 		opacity: 0.9;
+// 		height: 3em;
+// 		width: 3em;
+// 		margin-top: -1.5em;
+// 		margin-left: -1.5em;
+// 	}
+// 	100% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// }
+
+// @keyframes pulse {
+// 	0% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// 	50% {
+// 		opacity: 0.9;
+// 		height: 3em;
+// 		width: 3em;
+// 		margin-top: -1.5em;
+// 		margin-left: -1.5em;
+// 	}
+// 	100% {
+// 		opacity: 0.2;
+// 		height: 1em;
+// 		width: 1em;
+// 		margin-top: -0.5em;
+// 		margin-left: -0.5em;
+// 	}
+// }
+
 html.no-scroll {
 	max-height: 100%;
 	overflow: hidden;
 }
 
+
+// structure
 .button-wrapper {
 	text-align: center
 }
@@ -79,7 +202,7 @@ html.no-scroll {
 	display: inline-block;
 	margin-top: 50px;
 	margin-right: $font-size-base;
-	margin-bottom: 2 * $font-size-base;
+	margin-bottom: 82px;
 	margin-left: $font-size-base;
 	padding-bottom: $font-size-base;
 	box-sizing: border-box;
@@ -95,14 +218,15 @@ html.no-scroll {
 	& > span {
 		display: block;
 		float: left;
+		user-select: none;
 	}
 }
 
 .btn-choice {
 	padding-left: 10px;
-	color: $color-gray;
+	color: #000;
 
-	cursor: pointer;
+	// cursor: pointer;
 	user-select: none;
 	@include transition(color, .4s, linear);
 
@@ -147,7 +271,7 @@ html.no-scroll {
 
 	border: none;
 	outline: none;
-	cursor: pointer;
+	// cursor: pointer;
 }
 
 .stories-container {
@@ -164,7 +288,7 @@ html.no-scroll {
 	font-family: $font-family-display;
 	font-weight: $bold;
 	color: $color-gray;
-	cursor: pointer;
+	// cursor: pointer;
 
 	&.clone {
 		color: #000 !important;
@@ -219,7 +343,7 @@ html.no-scroll {
 		text-decoration: none;
 		color: inherit;
 
-		cursor: pointer;
+		// cursor: pointer;
 
 		&:after {
 			content: '';
@@ -267,4 +391,12 @@ html.no-scroll {
     	margin: auto;
     	padding: 0 50px;
     }
+}
+
+.btn-close {
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    font-size: 40px;
+    float: right;
 }

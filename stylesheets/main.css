@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,6 +48,55 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: 'toc';
+  src: url("../fonts/toc.eot?vmt5h9");
+  src: url("../fonts/toc.eot?vmt5h9#iefix") format("embedded-opentype"), url("../fonts/toc.ttf?vmt5h9") format("truetype"), url("../fonts/toc.woff?vmt5h9") format("woff"), url("../fonts/toc.svg?vmt5h9#toc") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon__"], [class*=" icon__"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'toc' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon__arrow--down:before {
+  content: "";
+}
+
+.icon__arrow--left:before {
+  content: "";
+}
+
+.icon__arrow--right:before {
+  content: "";
+}
+
+.icon__arrow--up:before {
+  content: "";
+}
+
+.icon__interrogation:before {
+  content: "";
+}
+
+.icon__smiley:before {
+  content: "";
+}
+
+.icon__cross:before {
+  content: "";
+}
+
 html {
   font-size: 1em;
 }
@@ -91,6 +141,10 @@ small, .font_small {
   font-size: 0.75em;
 }
 
+body {
+  cursor: url("../img/cursor.ico"), default !important;
+}
+
 html.no-scroll {
   max-height: 100%;
   overflow: hidden;
@@ -105,7 +159,7 @@ html.no-scroll {
   display: inline-block;
   margin-top: 50px;
   margin-right: 21px;
-  margin-bottom: 42px;
+  margin-bottom: 82px;
   margin-left: 21px;
   padding-bottom: 21px;
   box-sizing: border-box;
@@ -119,12 +173,12 @@ html.no-scroll {
 .button-container > span {
   display: block;
   float: left;
+  user-select: none;
 }
 
 .btn-choice {
   padding-left: 10px;
-  color: #999999;
-  cursor: pointer;
+  color: #000;
   user-select: none;
   -moz-transition: color, 0.4s, linear;
   -o-transition: color, 0.4s, linear;
@@ -162,7 +216,6 @@ html.no-scroll {
   background: none;
   border: none;
   outline: none;
-  cursor: pointer;
 }
 
 .stories-container {
@@ -179,7 +232,6 @@ html.no-scroll {
   font-family: "Gentium Book Basic", serif;
   font-weight: 700;
   color: #999999;
-  cursor: pointer;
 }
 .story.clone {
   color: #000 !important;
@@ -228,7 +280,6 @@ html.no-scroll {
   font-style: italic;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 .story .story__url:after {
   content: '';
@@ -272,6 +323,14 @@ html.no-scroll {
   max-width: 660px;
   margin: auto;
   padding: 0 50px;
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  font-size: 40px;
+  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */

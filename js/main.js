@@ -1,7 +1,3 @@
-// var stories_map
-// var stories
-// var stories_2
-
 var font_size_base = 24;
 var parameters = [
   "space",
@@ -13,7 +9,6 @@ var parameters = [
 ];
 
 var choices_pool = [];
-var choices_pool_2 = [];
 
 var choice1 = {
   "idStory": "",
@@ -26,10 +21,6 @@ var choice2 = {
   "parameter": "",
   "value": "",
 };
-
-var choice_2;
-
-var stories_pool = [];
 
 $(document).ready(function() {
     init();
@@ -58,6 +49,7 @@ function init() {
     update_stories();
   });
 
+  // Keyboard controls
   $(document).keydown(function(e) {
     if (e.keyCode == 37) { // left arrow = click on 1st choice
       $('#choice_1').trigger('click');
@@ -67,6 +59,7 @@ function init() {
     }
   });
 
+  // Open story on click
   $(document).on('click', '.story', function() {
     console.log('story clicked');
     var id = $(this).data('id');
@@ -83,6 +76,11 @@ function init() {
     } else if (!isEmpty(stories_2[id].url)) {
       // Open link in new window
     }
+  });
+
+  $(document).on('click', '.js-close-story', function() {
+    $('#js-story-overlay').fadeOut().removeClass('expanded');
+    $('html').removeClass('no-scroll');
   });
 
   // Hey curious being
