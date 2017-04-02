@@ -80,6 +80,9 @@ function init() {
     if (current_story_id < stories_2.length) {
       current_story_id++;
       display_story(current_story_id);
+      $('.story__overlay').animate({
+        scrollTop: 0
+      }, 500);
     }
   });
 
@@ -87,6 +90,9 @@ function init() {
     if (current_story_id > 0) {
       current_story_id--;
       display_story(current_story_id);
+      $('.story__overlay').animate({
+        scrollTop: 0
+      }, 500);
     }
   });
 
