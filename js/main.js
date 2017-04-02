@@ -52,11 +52,15 @@ function init() {
 
   // Keyboard controls
   $(document).keydown(function(e) {
+    console.log(e.keyCode);
     if (e.keyCode == 37) { // left arrow = click on 1st choice
       $('#choice_1').trigger('click');
     }
     if (e.keyCode == 39) { //right arrow = click on 2nd choice
       $('#choice_2').trigger('click');
+    }
+    if (e.keyCode == 27) { //right arrow = click on 2nd choice
+      $('.js-close-story').trigger('click');
     }
   });
 
