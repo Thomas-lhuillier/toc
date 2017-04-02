@@ -132,7 +132,6 @@ function randomize_1st() {
 
 function randomize_2nd() {
   console.clear();
-  console.log("randomize_2nd");
   // @TODO keep prev choice, and prevent gettings the same result.
   // Reset var
   if (!isEmpty(choice2.value)) {
@@ -148,8 +147,25 @@ function randomize_2nd() {
 
     // If story contains 1st choice value
     for (var key in story) {
-      if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) && story[key].indexOf(choice1.value) >= 0 ) {
-        isValid = true;
+      if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) ) {
+        // if is array
+        if (Array.isArray(story[key])) {
+          // console.log('its an array');
+          var array = story[key];
+          // console.log(array);
+          for (var y = 0; y < array.length; y++) {
+            // console.log('array[y] : ', array[y]);
+            if (array[y] == choice1.value) {
+              isValid = true;
+            }
+          }
+        } else {
+          // console.log('its something else..');
+          var string = story[key];
+          if (string == choice1.value) {
+            isValid = true;
+          }
+        }
       }
     }
 
@@ -169,17 +185,13 @@ function randomize_2nd() {
     makeChoicesPool(stories_2[randomStory], temp_choices);
     var temp_choice = pickRandomValue(temp_choices);
 
-    if ( temp_choice[1] != choice1.parameter ) {
-      console.log(temp_choices);
-      // if ( temp_choices.length > 1 && temp_choice[1] != prev_choice ) {
-        choice2.idStory   = temp_choice[0];
-        choice2.parameter = temp_choice[1];
-        choice2.value     = temp_choice[2];
-      // }
+    if ( temp_choice[1] !== choice1.parameter ) {
+      console.log(temp_choice);
+      choice2.idStory   = temp_choice[0];
+      choice2.parameter = temp_choice[1];
+      choice2.value     = temp_choice[2];
     }
   }
-
-  console.log(stories_pool);
 
   // Append 2nd choice
   $('#choice_2').html(choice2.value);
@@ -227,20 +239,63 @@ function display_stories() {
 var selected_stories;
 function update_stories() {
   selected_stories = [];
-  for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
-    if ( choices_pool[i][2] == choice2.value ) {  // if choice value = choice1.value
-      var story = stories_2[choice1.idStory];
-      var isValid = false;
-      for (var key in story) { // if this story contains choice2.value
-        if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) && story[key].indexOf(choice1.value) >= 0 ) {
-          isValid = true;
+  // for (var i = 0; i < choices_pool.length; i++) { // Loop through choices list
+  //   if ( choices_pool[i][2] == choice1.value ) {  // if choice value = choice1.value
+  //     var story = stories_2[choices_pool[i][0]];
+  //     var isValid = false;
+  //     for (var key in story) { // if this story contains choice2.value
+  //       if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) ) {
+  //         // if is array
+  //         if (Array.isArray(story[key])) {
+  //           var array = story[key];
+  //           for (var y = 0; y < array.length; y++) {
+  //             if (array[y] == choice2.value) {
+  //               isValid = true;
+  //             }
+  //           }
+  //         } else {
+  //           var string = story[key];
+  //           if (string == choice2.value) {
+  //             isValid = true;
+  //           }
+  //         }
+  //       }
+  //     }
+  //     if (isValid) {
+  //       console.log('isValid, on push l‘ID :', choices_pool[i][0]);
+  //       selected_stories.push(choices_pool[i][0]);
+  //     }
+  //   }
+  // }
+
+  for (var i = 0; i < stories_pool.length; i++) {
+    var story = stories_2[stories_pool[i]];
+    console.log(story);
+    var isValid = false;
+    for (var key in story) { // if this story contains choice2.value
+      if ( story.hasOwnProperty(key) && parameters.indexOf(key) >= 0 && !isEmpty(story[key]) ) {
+        // if is array
+        if (Array.isArray(story[key])) {
+          var array = story[key];
+          for (var y = 0; y < array.length; y++) {
+            if (array[y] == choice2.value) {
+              isValid = true;
+            }
+          }
+        } else {
+          var string = story[key];
+          if (string == choice2.value) {
+            isValid = true;
+          }
         }
       }
-      if (isValid) {
-        selected_stories.push(choices_pool[i][0]);
-      }
+    }
+    if (isValid) {
+      console.log('isValid, on push l‘ID :', stories_pool[i]);
+      selected_stories.push(stories_pool[i]);
     }
   }
+
   // disable / enable 2nd choice
   if ( stories_pool.length === 1 ) {
     $('#choice_2').addClass('disabled');
